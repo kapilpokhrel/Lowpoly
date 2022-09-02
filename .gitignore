@@ -1,3 +1,4 @@
-functionsTest.ipynb
 .venv
+__pycache__
+functionsTest.ipynb
 chromedriver
