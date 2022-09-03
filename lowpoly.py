@@ -88,18 +88,25 @@ class LowPoly:
 
 
 def draw_triangles_in_desmos(lowpoly, browser):
-    pass
+    # Calc is the Calculator object in desmos.
+    expression_layout = "Calc.setExpression({{ latex: `\\\operatorname{{polygon}}({},{},{})`, fillOpacity: '1', fill: 'true', color: '#{:x}{:x}{:x}' }});"
+
+    vertices = lowpoly.triangles.points
+    for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
+        expression = expression_layout.format( *[(vertices[i][0], -vertices[i][1]) for i in triangle], *[i for i in color] )
+        browser.execute_script(expression)
+
 
 if __name__=="__main__":
 
-    lowpoly = LowPoly('image.png');
+    lowpoly = LowPoly('dogimage.jpg');
 
     # Initializing Selenium for opening desmos
     browser = webdriver.Chrome()
     browser.get("https://desmos.com/calculator")
 
     #Generate Triangles
-    lowpoly.generate_max_entropy_points()
+    lowpoly.generate_max_entropy_points(10)
     lowpoly.generate_triangles()
 
     draw_triangles_in_desmos(lowpoly, browser=browser)
