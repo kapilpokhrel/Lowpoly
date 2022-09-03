@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 from skimage import filters, morphology
 from scipy.spatial import Delaunay
 import pandas as pd
@@ -106,9 +107,10 @@ if __name__=="__main__":
     browser.get("https://desmos.com/calculator")
 
     #Generate Triangles
-    lowpoly.generate_max_entropy_points(10)
+    lowpoly.generate_max_entropy_points(100)
     lowpoly.generate_triangles()
 
+    WebDriverWait(browser, timeout=10).until( lambda driver: (driver.execute_script("return typeof Calc;") == "object") )
     draw_triangles_in_desmos(lowpoly, browser=browser)
 
 
