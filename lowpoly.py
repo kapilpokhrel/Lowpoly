@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from skimage import filters, morphology
 from scipy.spatial import Delaunay
 import pandas as pd
+from argparse import ArgumentParser
 
 class LowPoly:
     def __init__(self, filename) -> None:
@@ -115,18 +116,34 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
 
 if __name__=="__main__":
 
-    lowpoly = LowPoly('dogimage.jpg');
+    parser = ArgumentParser(description='Genrate Lowpoly image on Desmos Graph')
+    parser.add_argument('imagefile', metavar='ImageFile',
+            help='Filepath of an image to convert.')
+    parser.add_argument('-p', '--points', type=int, 
+            help='No of points used while generating triangle. (More points = More details = More Processing Time) (Default: Calculated based on image size)')
+    parser.add_argument('-t', '--triangles', nargs='?', type=int, const=1, default=1, 
+            help='No of triangle to draw at a time. -1 for drawing all at once (Default 1)')
+
+    arguments = parser.parse_args()
+
+    lowpoly = LowPoly(arguments.imagefile);
 
     # Initializing Selenium for opening desmos
     browser = webdriver.Chrome()
     browser.get("https://desmos.com/calculator")
 
     #Generate Triangles
-    lowpoly.generate_max_entropy_points(500)
+    points = 1
+    if(arguments.points is None):
+        points = max(points, int(lowpoly.width*lowpoly.height/2500)) # 1 point for 50x50px area
+    else:
+        points = arguments.points
+    
+    lowpoly.generate_max_entropy_points(points)
     lowpoly.generate_triangles()
 
     WebDriverWait(browser, timeout=10).until( lambda driver: (driver.execute_script("return typeof Calc;") == "object") )
-    draw_triangles_in_desmos(lowpoly, browser=browser, n_triangle=-1)
+    draw_triangles_in_desmos(lowpoly, browser=browser, n_triangle=arguments.triangles)
 
 
     
