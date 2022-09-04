@@ -88,14 +88,29 @@ class LowPoly:
         self.triangles_color = color_per_triangle.values.astype("uint8")
 
 
-def draw_triangles_in_desmos(lowpoly, browser):
+def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
+    '''
+        n_triangles is the number of triangles to draw at a time.
+        It looks cool to see picture being made piece by piece but sometimes it can be too slow.
+        -1 = all at once
+    '''
+
+    expression_list = []
+
     # Calc is the Calculator object in desmos.
     expression_layout = "Calc.setExpression({{ latex: `\\\operatorname{{polygon}}({},{},{})`, fillOpacity: '1', fill: 'true', color: '#{:x}{:x}{:x}' }});"
 
     vertices = lowpoly.triangles.points
     for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
         expression = expression_layout.format( *[(vertices[i][0], -vertices[i][1]) for i in triangle], *[i for i in color] )
-        browser.execute_script(expression)
+        expression_list.append(expression)
+
+    if(n_triangle == -1):
+        browser.execute_script("".join(expression_list))
+    else:
+        for i in range(0, len(expression_list), n_triangle):
+            current_expression_list = expression_list[i:i+n_triangle]
+            browser.execute_script("".join(current_expression_list))
 
 
 if __name__=="__main__":
@@ -107,11 +122,11 @@ if __name__=="__main__":
     browser.get("https://desmos.com/calculator")
 
     #Generate Triangles
-    lowpoly.generate_max_entropy_points(100)
+    lowpoly.generate_max_entropy_points(500)
     lowpoly.generate_triangles()
 
     WebDriverWait(browser, timeout=10).until( lambda driver: (driver.execute_script("return typeof Calc;") == "object") )
-    draw_triangles_in_desmos(lowpoly, browser=browser)
+    draw_triangles_in_desmos(lowpoly, browser=browser, n_triangle=-1)
 
 
     
