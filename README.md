@@ -22,6 +22,7 @@ This is a python script to generate lowpoly of a image in a desmos graph. This u
     ```
     python lowpoly.py dogimage.jpg
     ```
+    Sometimes when using more points you might want to wait sometimes after browser window opens before it starts drawing.
 
 ## Why Python with selenium instead of just using Javascript?
 
