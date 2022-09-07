@@ -32,9 +32,13 @@ class LowPoly:
         entropy_radius = length_scale*0.15;
         gmask_aplitude = 3
         gmask_sd = length_scale * 0.3;
+        gfilter_radius = length_scale*0.1;
+
+        #Apply Gaussian filter on image to make it image smooth 
+        smooth_image = filters.gaussian(self.grayscale_image, gfilter_radius);
         
         #Appllying entropy filter
-        filtered_image = filters.rank.entropy(self.grayscale_image, morphology.disk(entropy_radius));
+        filtered_image = filters.rank.entropy(smooth_image, morphology.disk(entropy_radius));
 
         points = []
         for i in range(n_points):
