@@ -99,8 +99,29 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
         It looks cool to see picture being made piece by piece but sometimes it can be too slow.
         -1 = all at once
     '''
-    hwidth = lowpoly.width/2
-    hheight = lowpoly.height/2
+    HalfWidth = lowpoly.width/2
+    HalfHeight = lowpoly.height/2
+
+    browser.execute_script("""
+        Calc.updateSettings({
+            xAxisNumbers: false,
+            yAxisNumbers: false,
+            expressionsCollapsed: true
+        });
+    """)
+    coords = browser.execute_script("return Calc.graphpaperBounds.mathCoordinates;");
+    aRatio = coords['width']/coords['height']
+
+    xboundry = 0
+    yboundry = 0
+    if(HalfWidth > HalfHeight):
+        xboundry = 50+HalfWidth # 50 is padding
+        yboundry = xboundry/aRatio
+    else:
+        yboundry = 50+HalfHeight
+        xboundry = aRatio*yboundry
+
+    browser.execute_script("Calc.setMathBounds({{ left: {}, right: {}, top: {}, bottom: {} }})".format(-xboundry, xboundry, yboundry, -yboundry));
 
     expression_list = []
 
@@ -109,7 +130,7 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
 
     vertices = lowpoly.triangles.points
     for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
-        expression = expression_layout.format( *[(vertices[i][0]-hwidth, -(vertices[i][1]-hheight)) for i in triangle], *[i for i in color] )
+        expression = expression_layout.format( *[(vertices[i][0]-HalfWidth, -(vertices[i][1]-HalfHeight)) for i in triangle], *[i for i in color] )
         expression_list.append(expression)
 
     if(n_triangle == -1):
