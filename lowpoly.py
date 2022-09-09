@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from skimage import filters, morphology
+from skimage import filters, morphology, util
 from scipy.spatial import Delaunay
 import pandas as pd
 from argparse import ArgumentParser
@@ -35,7 +35,7 @@ class LowPoly:
         gfilter_radius = length_scale*0.1;
 
         #Apply Gaussian filter on image to make it image smooth 
-        smooth_image = filters.gaussian(self.grayscale_image, gfilter_radius);
+        smooth_image = util.img_as_ubyte(filters.gaussian(self.grayscale_image, gfilter_radius))
         
         #Appllying entropy filter
         filtered_image = filters.rank.entropy(smooth_image, morphology.disk(entropy_radius));
@@ -99,6 +99,8 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
         It looks cool to see picture being made piece by piece but sometimes it can be too slow.
         -1 = all at once
     '''
+    hwidth = lowpoly.width/2
+    hheight = lowpoly.height/2
 
     expression_list = []
 
@@ -107,7 +109,7 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
 
     vertices = lowpoly.triangles.points
     for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
-        expression = expression_layout.format( *[(vertices[i][0], -vertices[i][1]) for i in triangle], *[i for i in color] )
+        expression = expression_layout.format( *[(vertices[i][0]-hwidth, -(vertices[i][1]-hheight)) for i in triangle], *[i for i in color] )
         expression_list.append(expression)
 
     if(n_triangle == -1):
