@@ -1,7 +1,6 @@
+from ast import arg
 from PIL import Image
 import numpy as np
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
 from skimage import filters, morphology, util
 from scipy.spatial import Delaunay
 import pandas as pd
@@ -102,26 +101,49 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
     HalfWidth = lowpoly.width/2
     HalfHeight = lowpoly.height/2
 
-    browser.execute_script("""
+    setting = """
         Calc.updateSettings({
             xAxisNumbers: false,
             yAxisNumbers: false,
             expressionsCollapsed: true
         });
-    """)
-    coords = browser.execute_script("return Calc.graphpaperBounds.mathCoordinates;");
-    aRatio = coords['width']/coords['height']
+    """
+   
+    if(browser):
+        browser.execute_script(setting)
+        coords = browser.execute_script("return Calc.graphpaperBounds.mathCoordinates;");
+        aRatio = coords['width']/coords['height']
 
-    xboundry = 0
-    yboundry = 0
-    if(HalfWidth > HalfHeight):
-        xboundry = 50+HalfWidth # 50 is padding
-        yboundry = xboundry/aRatio
+        xboundry = 0
+        yboundry = 0
+        if(HalfWidth > HalfHeight):
+            xboundry = 50+HalfWidth # 50 is padding
+            yboundry = xboundry/aRatio
+        else:
+            yboundry = 50+HalfHeight
+            xboundry = aRatio*yboundry
+
+        browser.execute_script("Calc.setMathBounds({{ left: {}, right: {}, top: {}, bottom: {} }})".format(-xboundry, xboundry, yboundry, -yboundry));
     else:
-        yboundry = 50+HalfHeight
-        xboundry = aRatio*yboundry
+        boundssetting = """
+            coords = Calc.graphpaperBounds.mathCoordinates;
+            aRatio = coords.width/coords.height;
+            hWidth = {};
+            hHeight = {};
+            xboundry = 0;
+            
+            if(hWidth > hHeight) {{
+                xboundry = 50 + hWidth
+                yboundry = xboundry/aRatio
+            }} else {{
+                yboundry = 50 + hHeight
+                xboundry = aRatio*yboundry
+            }}
+            Calc.setMathBounds({{ left: -xboundry, right: xboundry, top: yboundry, bottom: -yboundry }})
+        """.format(HalfWidth, HalfHeight)
 
-    browser.execute_script("Calc.setMathBounds({{ left: {}, right: {}, top: {}, bottom: {} }})".format(-xboundry, xboundry, yboundry, -yboundry));
+        print(setting)
+        print(boundssetting)
 
     expression_list = []
 
@@ -133,13 +155,16 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
         expression = expression_layout.format( *[(vertices[i][0]-HalfWidth, -(vertices[i][1]-HalfHeight)) for i in triangle], *[i for i in color] )
         expression_list.append(expression)
 
-    if(n_triangle == -1):
-        browser.execute_script("".join(expression_list))
+    if(browser):
+        if(n_triangle == -1):
+            browser.execute_script("".join(expression_list))
+        else:
+            for i in range(0, len(expression_list), n_triangle):
+                current_expression_list = expression_list[i:i+n_triangle]
+                browser.execute_script("".join(current_expression_list))
     else:
-        for i in range(0, len(expression_list), n_triangle):
-            current_expression_list = expression_list[i:i+n_triangle]
-            browser.execute_script("".join(current_expression_list))
-
+        for expression in expression_list:
+            print(expression)
 
 if __name__=="__main__":
 
@@ -150,14 +175,23 @@ if __name__=="__main__":
             help='No of points used while generating triangle. (More points = More details = More Processing Time) (Default: Calculated based on image size)')
     parser.add_argument('-t', '--triangles', nargs='?', type=int, const=1, default=1, 
             help='No of triangle to draw at a time. -1 for drawing all at once (Default 1)')
+    parser.add_argument('-nb','--nobrowser', action='store_true',
+            help='Spits out js expressions insted of opening browser, ofcourse -t will not have any effect')
 
     arguments = parser.parse_args()
 
     lowpoly = LowPoly(arguments.imagefile);
 
+    
+    browser = None
+
     # Initializing Selenium for opening desmos
-    browser = webdriver.Chrome()
-    browser.get("https://desmos.com/calculator")
+    if(arguments.nobrowser != True):
+        from selenium import webdriver
+        from selenium.webdriver.support.ui import WebDriverWait
+        
+        browser = webdriver.Chrome()
+        browser.get("https://desmos.com/calculator")
 
     #Generate Triangles
     points = 1
@@ -169,7 +203,8 @@ if __name__=="__main__":
     lowpoly.generate_max_entropy_points(points)
     lowpoly.generate_triangles()
 
-    WebDriverWait(browser, timeout=10).until( lambda driver: (driver.execute_script("return typeof Calc;") == "object") )
+    if(arguments.nobrowser != True):
+        WebDriverWait(browser, timeout=10).until( lambda driver: (driver.execute_script("return typeof Calc;") == "object") )
     draw_triangles_in_desmos(lowpoly, browser=browser, n_triangle=arguments.triangles)
 
 
