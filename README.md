@@ -11,8 +11,10 @@ This is a python script to generate lowpoly of a image in a desmos graph. This u
         cd DesmosLowpoly
     ```
 - **Install dependencies**
-    - Download browser driver for selenium.
-    [Install browser drivers](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/)
+    - [**Optional**] Download browser driver for selenium.
+    [Install browser drivers.](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/)
+    
+        You can pass -nb flag to not open the browser and get the js expressions to run on browser yourself.
 
     - Install python packages
     ```
@@ -22,6 +24,16 @@ This is a python script to generate lowpoly of a image in a desmos graph. This u
     ```
     python lowpoly.py dogimage.jpg
     ```
+    If you wish to not use selenium to open browser, you can copy the code into the desmos calculator console.
+    
+    - Run
+        ``` 
+        python lowpoly.py dogimage.jpg -nb | xclip -selection clipboard 
+        ```
+    - Goto https://www.desmos.com/calculator
+    - Open Inspect element (Press F12) and goto console tab.
+    - Paste the code and hit enter.
+
     Sometimes when using more points you might want to wait sometimes after browser window opens before it starts drawing.
 
 ## Why Python with selenium instead of just using Javascript?
