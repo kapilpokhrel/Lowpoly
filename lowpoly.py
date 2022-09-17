@@ -216,6 +216,8 @@ if __name__=="__main__":
             help='No of triangle to draw at a time. -1 for drawing all at once (Default 1)')
     parser.add_argument('-nb','--nobrowser', action='store_true',
             help='Spits out js expressions insted of opening browser, ofcourse -t will not have any effect')
+    parser.add_argument('-m', '--method', choices=['e', 's'], default='e',
+            help='Method to get points, e for entropy method (slow but good result), s for sobel method; little bit fast')
 
     arguments = parser.parse_args()
 
@@ -239,8 +241,10 @@ if __name__=="__main__":
     else:
         points = arguments.points
     
-    #lowpoly.generate_max_entropy_points(points)
-    lowpoly.generate_points_from_sobel(points, points)
+    if(arguments.method == 's'):
+        lowpoly.generate_points_from_sobel(points, points)
+    else:
+        lowpoly.generate_max_entropy_points(points)
     lowpoly.generate_triangles()
 
     if(arguments.nobrowser != True):
