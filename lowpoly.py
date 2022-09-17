@@ -1,4 +1,3 @@
-from ast import arg
 from PIL import Image
 import numpy as np
 from skimage import filters, morphology, util
@@ -13,6 +12,14 @@ class LowPoly:
         self.grayscale_image = self.image.dot([0.07, 0.72, 0.21]).astype("uint8")
         self.shape = self.grayscale_image.shape
         self.height, self.width = self.shape[:2]
+
+    def __get_cornor_points(self):
+        points = []
+        points.append((0,0))
+        points.append((self.width-1, 0))
+        points.append((0,self.height-1))
+        points.append((self.width-1,self.height-1))
+        return points
 
     def __get_max_points(self, array):
         y, x = np.unravel_index(np.argmax(array), array.shape)
@@ -45,13 +52,45 @@ class LowPoly:
             points.append((x,y))
             filtered_image -= self.__gaussian_mask(x, y, self.shape, gmask_aplitude, gmask_sd)
 
-        #Adding cornor points
-        points.append((0,0))
-        points.append((self.width-1, 0))
-        points.append((0,self.height-1))
-        points.append((self.width-1,self.height-1))
-        self.points = np.array(points)
-            
+        self.points = np.array(points + self.__get_cornor_points())
+
+    def generate_points_from_sobel(self, bgPoints, edgePoints):
+        '''
+            This is just generating uniform random points on the image and
+            adding some points around edges to retain from valuable information of image.
+            Why? -> It's a bit fast.
+        '''
+        smooth_image = filters.gaussian(self.grayscale_image, 3, preserve_range=True)
+        sobel = filters.sobel(smooth_image)
+        height, width = self.image.shape[:2]
+        threshold = 2
+
+        random_points = np.random.uniform(size=(bgPoints, 2))
+        random_points *= np.array([width-1, height-1])
+
+        edge_points = []
+        for y in range(0, height, 2):
+            for x in range(0, width, 2):
+                sum = 0
+                total = 0
+                for row in range(-1, 2):
+                    sy = y + row
+                    if(sy >= 0 and sy < height):
+                        for col in range(-1,2):
+                            sx = x + col
+                            if(sx >= 0 and sx < width):
+                                sum += sobel[y,x];
+                                total += 1
+                
+                if(total):
+                    sum /= total
+                    if(sum >= threshold):
+                        edge_points.append((x,y))
+
+        increment = max(int(len(edge_points)/edgePoints),1)
+        edge_points = [edge_points[i] for i in range(0, len(edge_points), increment)]
+      
+        self.points = np.concatenate([random_points, np.array(edge_points + self.__get_cornor_points())])      
 
     def generate_triangles(self):
         self.triangles = Delaunay(self.points)
@@ -200,7 +239,8 @@ if __name__=="__main__":
     else:
         points = arguments.points
     
-    lowpoly.generate_max_entropy_points(points)
+    #lowpoly.generate_max_entropy_points(points)
+    lowpoly.generate_points_from_sobel(points, points)
     lowpoly.generate_triangles()
 
     if(arguments.nobrowser != True):
