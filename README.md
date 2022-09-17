@@ -1,5 +1,5 @@
 # Desmos Lowpoly
-This is a python script to generate lowpoly of a image in a desmos graph. This uses selenium to open the browser and display the content.
+This is a python script to generate lowpoly of a image in a desmos graph. This uses selenium to open the browser and display the content but it's optional and you can also paste the js directly into browser console.
 
 ![Preview mage](preview.png)
 
