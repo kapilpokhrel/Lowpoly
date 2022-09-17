@@ -63,7 +63,7 @@ class LowPoly:
         smooth_image = filters.gaussian(self.grayscale_image, 3, preserve_range=True)
         sobel = filters.sobel(smooth_image)
         height, width = self.image.shape[:2]
-        threshold = 2
+        threshold = int(filters.threshold_triangle(sobel)*5)
 
         random_points = np.random.uniform(size=(bgPoints, 2))
         random_points *= np.array([width-1, height-1])
