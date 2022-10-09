@@ -210,8 +210,14 @@ if __name__=="__main__":
     parser = ArgumentParser(description='Genrate Lowpoly image on Desmos Graph')
     parser.add_argument('imagefile', metavar='ImageFile',
             help='Filepath of an image to convert.')
-    parser.add_argument('-p', '--points', type=int, 
-            help='No of points used while generating triangle. (More points = More details = More Processing Time) (Default: Calculated based on image size)')
+    parser.add_argument('-p', '--points', type=int, nargs='+', 
+            help="""
+                No of points used while generating triangle.
+                Two arguments can be passed while using sobel method.
+                Other arguments will be ignored.
+                (More points = More details = More Processing Time)
+                (Default: Calculated based on image size)
+            """)
     parser.add_argument('-t', '--triangles', nargs='?', type=int, const=1, default=1, 
             help='No of triangle to draw at a time. -1 for drawing all at once (Default 1)')
     parser.add_argument('-nb','--nobrowser', action='store_true',
@@ -236,13 +242,18 @@ if __name__=="__main__":
 
     #Generate Triangles
     points = 1
+    bg_points = None
     if(arguments.points is None):
         points = max(points, int(lowpoly.width*lowpoly.height/2500)) # 1 point for 50x50px area
     else:
-        points = arguments.points
+        points = arguments.points[0]
+        if(len(arguments.points) >= 2):
+            bg_points = arguments.points[1]
+        else:
+            bg_points = points
     
     if(arguments.method == 's'):
-        lowpoly.generate_points_from_sobel(points, points)
+        lowpoly.generate_points_from_sobel(bg_points, points)
     else:
         lowpoly.generate_max_entropy_points(points)
     lowpoly.generate_triangles()
