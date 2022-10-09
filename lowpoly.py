@@ -8,7 +8,7 @@ from argparse import ArgumentParser
 class LowPoly:
     def __init__(self, filename) -> None:
         #Open image as numpy array
-        self.image = np.array(Image.open(filename))
+        self.image = np.array(Image.open(filename).convert('RGB'))
         self.grayscale_image = self.image.dot([0.07, 0.72, 0.21]).astype("uint8")
         self.shape = self.grayscale_image.shape
         self.height, self.width = self.shape[:2]
