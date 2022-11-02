@@ -7,13 +7,15 @@
             content="Simple script to generate lowpoly images in desmos graph." />
         <title>DesmosLowpoly</title>
         <link ref="stylesheet" href="style.css">
-        <script src='../javascript/script.js'></script>
+        <script src='script.js'></script>
     </head>
     <body>
         <label for="image-file">Select a image: </label>
-        <input type="file" id="image-file" name="image-file">
-        <input type="number" id="edge-points" name="Edge Points" min="1" max="1500">
-        <input type="number" id="bg-points" name="Background Points" min="1" max="1000">
+        <input type="file" id="image-file" name="image-file" accept="image/*"><br>
+        <label for="edge-points">No of edge points: </label>
+        <input type="number" id="edge-points" name="Edge Points" min="1" max="1500" value="200"><br>
+        <label for="bg-points">No of background points: </label>
+        <input type="number" id="bg-points" name="Background Points" min="1" max="1000" value="50"><br>
         <button onclick="Process()">Click</button>
     </body>
 </html>
