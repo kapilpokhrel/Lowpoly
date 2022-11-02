@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="description"
+            content="Simple script to generate lowpoly images in desmos graph." />
+        <title>DesmosLowpoly</title>
+        <link ref="stylesheet" href="style.css">
+        <script src='../javascript/script.js'></script>
+    </head>
+    <body>
+        <label for="image-file">Select a image: </label>
+        <input type="file" id="image-file" name="image-file">
+        <input type="number" id="edge-points" name="Edge Points" min="1" max="1500">
+        <input type="number" id="bg-points" name="Background Points" min="1" max="1000">
+        <button onclick="Process()">Click</button>
+    </body>
+</html>
