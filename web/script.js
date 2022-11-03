@@ -1,4 +1,26 @@
 function draw_on_desmos(triangles) {
+    var testCanvas = document.getElementById("testCanvas");
+    if(testCanvas == null) {
+        testCanvas = document.createElement("canvas");
+        testCanvas.id = "testCanvas";
+        testCanvas.width = 1200;
+        testCanvas.height = 1000;
+        document.body.appendChild(testCanvas);
+    }
+    var ctx = testCanvas.getContext('2d');
+    ctx.clearRect(0, 0, testCanvas.width, testCanvas.height);
+
+    for(let i = 0; i < triangles.length; i++) {
+        let triangle = triangles[i];
+
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(triangle[0][0], triangle[0][1]);
+        ctx.lineTo(triangle[1][0], triangle[1][1]);
+        ctx.lineTo(triangle[2][0], triangle[2][1]);
+        ctx.closePath();
+        ctx.stroke();
+    }
 
 }
 

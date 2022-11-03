@@ -1,5 +1,6 @@
 //Web Worker to generate triangles from image
 importScripts("image.min.js");
+importScripts("delaunay.js");
 
 function get_points_from_sobel(grey_image, edge_points, bg_points){
     var blurred = grey_image.gaussianFilter({radius: 3, sigma:10});
@@ -20,7 +21,7 @@ function get_points_from_sobel(grey_image, edge_points, bg_points){
                     for(let col = -1; col < 2; col++) {
                         var sx = x + col;
                         if(sx >= 0 && sx < width) {
-                            sum += sobel.getPixelXY(sx, sy);
+                            sum += sobel.getPixelXY(sx, sy)[0];
                             total += 1;
                         }
                     }
@@ -28,7 +29,7 @@ function get_points_from_sobel(grey_image, edge_points, bg_points){
             }
 
             if(total)
-                if(sum/total > threshold)
+                if((sum/total) > threshold)
                     edges.push([x,y]);
         }        
     }
@@ -53,7 +54,18 @@ function get_points_from_sobel(grey_image, edge_points, bg_points){
 }
 
 function generate_triangles(image, points) {
-    
+    var points = get_points_from_sobel(image.grey(), points.edge_points, points.bg_points);
+    var vertices = Delaunay.triangulate(points);
+    var triangles = [];
+
+    for(let i = 0; i < vertices.length; i += 3) {
+        triangles.push([
+            points[vertices[i]],
+            points[vertices[i+1]],
+            points[vertices[i+2]]
+        ]);
+    }
+    return triangles;
 }
 
 self.onmessage = function(msg) {
