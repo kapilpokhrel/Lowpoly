@@ -3,23 +3,28 @@ function draw_on_desmos(triangles) {
     if(testCanvas == null) {
         testCanvas = document.createElement("canvas");
         testCanvas.id = "testCanvas";
-        testCanvas.width = 1200;
-        testCanvas.height = 1000;
+        testCanvas.width = 5000;
+        testCanvas.height = 5000;
         document.body.appendChild(testCanvas);
     }
     var ctx = testCanvas.getContext('2d');
     ctx.clearRect(0, 0, testCanvas.width, testCanvas.height);
 
     for(let i = 0; i < triangles.length; i++) {
-        let triangle = triangles[i];
+        let vertices = triangles[i].vertices;
+        let color = triangles[i].color;
 
-        ctx.strokeStyle = "red";
         ctx.beginPath();
-        ctx.moveTo(triangle[0][0], triangle[0][1]);
-        ctx.lineTo(triangle[1][0], triangle[1][1]);
-        ctx.lineTo(triangle[2][0], triangle[2][1]);
+        ctx.moveTo(vertices[0].x, vertices[0].y);
+        ctx.lineTo(vertices[1].x, vertices[1].y);
+        ctx.lineTo(vertices[2].x, vertices[2].y);
         ctx.closePath();
+
+        ctx.fillStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+        ctx.strokeStyle = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+        ctx.fill();
         ctx.stroke();
+        
     }
 
 }
