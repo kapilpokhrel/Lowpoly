@@ -149,7 +149,11 @@ function generate_triangles(image, points) {
         });
 
     }
-    return triangles;
+    return {
+        triangles: triangles,
+        width: image.width,
+        height: image.height
+    };
 }
 
 self.onmessage = function(msg) {
