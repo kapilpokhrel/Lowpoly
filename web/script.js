@@ -1,50 +1,36 @@
 var width = null;
 var height = null;
+var imageFile = null;
+const imageArea = document.querySelector('.imageArea');
+const imageArea_text = document.querySelector('.imageArea .text');
+const browseButton = document.querySelector('.imageArea .button');
+const imageBrowser = document.getElementById("imageBrowser");
+const types = ['image/jpg', 'image/jpeg', 'image/png'];
 
 function canvasResize() {
     var testCanvas = document.getElementById("testCanvas");
-    var output = document.querySelector('.output');
+    var canvasArea = document.querySelector('.output .canvas');
 
-    var flexdirection = window.getComputedStyle(output).flexDirection;
-    if (width == null) {
-        if (flexdirection == 'row') {
-            testCanvas.style.width = '50%';
-            testCanvas.style.height = '100%';
+    let clientWidth = canvasArea.clientWidth*95/100;
+    let clientHeight = canvasArea.clientHeight*95/100;
+
+    if(width == null){
+        testCanvas.style.width = '100%';
+        testCanvas.style.height = '100%';
+    } else {
+        if (width > height) {
+            let canvasWidth = ~~Math.min(clientWidth, width);
+            canvasWidth = ~~Math.min(canvasWidth, (width/height)*(clientHeight));
+            testCanvas.style.width = `${canvasWidth}px`;
+            testCanvas.style.height = `${height / width * canvasWidth}px`;
         } else {
-            testCanvas.style.width = '100%';
-            testCanvas.style.height = '50%';
-        }
-    }
-    else {
-        if (flexdirection == 'row') {
-            if (width > height) {
-                let canvasWidth = ~~Math.min(output.clientWidth * 50 / 100, width);
-                testCanvas.style.width = `${canvasWidth}px`;
-                testCanvas.style.height = `${height / width * canvasWidth}px`;
-            }
-            else {
-                let canvasHeight = Math.min(output.clientHeight, height);
-                testCanvas.style.height = `${canvasHeight}px`;
-                testCanvas.style.width = `${width / height * canvasHeight}px`;
-            }
-        } else {
-            if (width > height) {
-                let canvasWidth = Math.min(output.clientWidth, width);
-                canvasWidth = Math.min(canvasWidth, (width/height)*(output.clientHeight*0.5));
-                testCanvas.style.width = `${canvasWidth}px`;
-                testCanvas.style.height = `${height / width * canvasWidth}px`;
-            }
-            else {
-                let canvasHeight = Math.min(output.clientHeight * 50 / 100, height);
-                canvasHeight = Math.min(canvasHeight, (height/width)*(output.clientWidth));
-                testCanvas.style.height = `${canvasHeight}px`;
-                testCanvas.style.width = `${width / height * canvasHeight}px`;
-            }
+            let canvasHeight = ~~Math.min(clientHeight, height);
+            canvasHeight = ~~Math.min(canvasHeight, (height/width)*(clientWidth));
+            testCanvas.style.height = `${canvasHeight}px`;
+            testCanvas.style.width = `${width / height * canvasHeight}px`;
         }
     }
 }
-
-window.onresize = canvasResize;
 
 function draw_on_desmos(data) {
     var triangles = data.triangles;
@@ -111,33 +97,31 @@ function draw_on_desmos(data) {
             (${vertices[0].x - width / 2}, ${-(vertices[0].y - height / 2)}),
             (${vertices[1].x - width / 2}, ${-(vertices[1].y - height / 2)}),
             (${vertices[2].x - width / 2}, ${-(vertices[2].y - height / 2)}))`;
-        window.setTimeout(() => {
+        setTimeout(() => {
             calculator.setExpression({
                 latex: latex,
                 fillOpacity: 1,
                 fill: true,
                 color: color
-            }),
-                1
-        });
+            })},
+            0
+        );
 
     }
 
 }
 
 function Process() {
-    var imagefile = document.getElementById("image-file");
-    if (imagefile.value == "")
+    if (imageFile == null)
         alert("Image not selected");
     else {
-        var file = imagefile.files[0];
         var edge_points = document.getElementById("edge-points").value;
         var bg_points = document.getElementById("bg-points").value;
         edge_points = (edge_points <= 0) ? 1 : edge_points;
         bg_points = (bg_points < 0) ? 0 : bg_points;
 
         var data = {
-            file: file,
+            file: imageFile,
             points: {
                 edge_points: edge_points,
                 bg_points: bg_points
@@ -152,3 +136,41 @@ function Process() {
         };
     }
 }
+
+canvasResize();
+window.onresize = canvasResize;
+browseButton.onclick = () => {
+    imageBrowser.click();
+}
+
+imageBrowser.addEventListener('change', (event) => {
+    imageFile = event.target.files[0];
+    if(types.includes(imageFile.type))
+        imageArea_text.textContent = imageFile.name;
+    else
+        alert("File type not supported");
+});
+
+imageArea.addEventListener('dragover', (event) => {
+    event.preventDefault();
+    imageArea_text.textContent = "Release to Upload";
+    imageArea.classList.add("active");
+});
+
+imageArea.addEventListener('dragleave', (event) => {
+    imageArea_text.textContent = "Drag & Drop an image";
+    imageArea.classList.remove("active");
+});
+
+imageArea.addEventListener('drop', (event) => {
+    event.preventDefault();
+    
+    imageFile = event.dataTransfer.files[0];
+    if(!types.includes(imageFile.type)) {
+        imageFile = null;
+        alert("File type not supported");
+        imageArea_text.textContent = "Drag & Drop an image";
+    } else {
+        imageArea_text.textContent = imageFile.name;
+    }
+});

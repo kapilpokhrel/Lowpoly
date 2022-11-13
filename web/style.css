@@ -1,18 +1,68 @@
 html, body {
     height: 100%;
+    background-color: #afd3eb;
+}
+
+.input {
+    background-color: #f1f6f9;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.imageArea {
+    border: 3px dotted;
+    margin: 5px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous';
+}
+
+.imageArea.active {
+    border: 3px solid #005fdd;
+}
+
+.imageArea .text {
+    width: 80%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.imageArea .button {
+    color: #005fdd;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.imageArea .button:hover {
+    cursor: pointer;
 }
 
 .output {
     display: flex;
     flex-direction: row;
     height: 80%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .output #calculator {
     width: 50%;
     height: 100%;
+    margin: 5px 5px 5px 5px;
+}
+
+.output .canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: 5px 5px 5px 0;
+    background-color:#f1f6f9;
 }
 
 @media screen and (max-width: 760px) {
@@ -21,6 +71,11 @@ html, body {
     }
 
     .output #calculator {
+        width: 100%;
+        height: 50%;
+    }
+
+    .output .canvas {
         width: 100%;
         height: 50%;
     }

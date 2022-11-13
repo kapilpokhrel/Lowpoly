@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="description"
-            content="Simple script to generate lowpoly images in desmos graph." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-        <title>DesmosLowpoly</title>
-        <link rel="stylesheet" href="style.css">
-        <script src='script.js'></script>
-        <script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-    </head>
-    <body>
-        <label for="image-file">Select a image: </label>
-        <input type="file" id="image-file" name="image-file" accept="image/*"><br>
-        <label for="edge-points">No of edge points: </label>
-        <input type="number" id="edge-points" name="Edge Points" min="1" max="1500" value="200"><br>
-        <label for="bg-points">No of background points: </label>
-        <input type="number" id="bg-points" name="Background Points" min="1" max="1000" value="50"><br>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Simple script to generate lowpoly images in desmos graph." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesmosLowpoly</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+</head>
+
+<body>
+    <div class="input">
+        <div class="imageArea">
+            <span class="text">Drag & Drop an image</span>
+            <span> or <span class="button">browse</span></span>
+            <input type="file" accept="image/jpg,image/jpeg,image/png" id="imageBrowser" hidden>
+        </div>
+        <div class="params">
+            <label for="edge-points">No of edge points: </label>
+            <input type="number" id="edge-points" name="Edge Points" min="1" max="1500" value="200"><br>
+            <label for="bg-points">No of background points: </label>
+            <input type="number" id="bg-points" name="Background Points" min="1" max="1000" value="50"><br>
+        </div>
         <button onclick="Process()">Generate</button><br>
-        
-        <div class="output">
-            <div id="calculator"></div>
+    </div>
+    <div class="output">
+        <div id="calculator"></div>
+        <div class="canvas">
             <canvas id="testCanvas"></canvas>
         </div>
-    </body>
-    <script>
-        var elt = document.getElementById('calculator');
-        var calculator = Desmos.GraphingCalculator(elt);
-      </script>
+    </div>
+</body>
+<script src='script.js'></script>
+<script>
+    var elt = document.getElementById('calculator');
+    var calculator = Desmos.GraphingCalculator(elt);
+</script>
+
 </html>
