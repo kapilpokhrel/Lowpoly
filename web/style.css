@@ -76,6 +76,15 @@ html, body {
     margin: 5px 5px 5px 5px;
 }
 
+#calculator:before {
+    content: "Some browser may not show gradual change and it may take some time.";
+    position: absolute;
+    z-index: 100;
+    padding: 1px;
+    font-size: 12px;
+    width: 80%;
+}
+
 .output .canvas {
     display: flex;
     justify-content: center;
