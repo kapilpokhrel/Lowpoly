@@ -5,6 +5,7 @@ const imageArea = document.querySelector('.imageArea');
 const imageArea_text = document.querySelector('.imageArea .text');
 const browseButton = document.querySelector('.imageArea .button');
 const imageBrowser = document.getElementById("imageBrowser");
+const genButton = document.querySelector(".genButton button");
 const types = ['image/jpg', 'image/jpeg', 'image/png'];
 
 function canvasResize() {
@@ -112,6 +113,7 @@ function draw_on_desmos(data) {
 }
 
 function Process() {
+    genButton.textContent = "Loading";
     if (imageFile == null)
         alert("Image not selected");
     else {
@@ -133,6 +135,7 @@ function Process() {
         generator.postMessage(data);
         generator.onmessage = function (msg) {
             draw_on_desmos(msg.data);
+            genButton.textContent = "Generate";
         };
     }
 }
