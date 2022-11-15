@@ -165,20 +165,25 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
         browser.execute_script("Calc.setMathBounds({{ left: {}, right: {}, top: {}, bottom: {} }})".format(-xboundry, xboundry, yboundry, -yboundry));
     else:
         boundssetting = """
-            coords = Calc.graphpaperBounds.mathCoordinates;
-            aRatio = coords.width/coords.height;
-            hWidth = {};
-            hHeight = {};
-            xboundry = 0;
+            var coords = Calc.graphpaperBounds.mathCoordinates;
+            var aRatio = coords.width/coords.height;
+            var hWidth = {};
+            var hHeight = {};
+            var xboundry, yboundry;
             
             if(hWidth > hHeight) {{
-                xboundry = 50 + hWidth
-                yboundry = xboundry/aRatio
+                xboundry = 50 + hWidth;
+                yboundry = xboundry/aRatio;
             }} else {{
-                yboundry = 50 + hHeight
-                xboundry = aRatio*yboundry
+                yboundry = 50 + hHeight;
+                xboundry = aRatio*yboundry;
             }}
-            Calc.setMathBounds({{ left: -xboundry, right: xboundry, top: yboundry, bottom: -yboundry }})
+            Calc.setMathBounds({{
+                left: -xboundry,
+                right: xboundry,
+                top: yboundry,
+                bottom: -yboundry
+            }});
         """.format(HalfWidth, HalfHeight)
 
         print(setting)
@@ -187,11 +192,18 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
     expression_list = []
 
     # Calc is the Calculator object in desmos.
-    expression_layout = "Calc.setExpression({{ latex: `\\\operatorname{{polygon}}({},{},{})`, fillOpacity: '1', fill: 'true', color: '#{:x}{:x}{:x}' }});"
+    expression_layout = """Calc.setExpression({{
+        latex: `\\\operatorname{{polygon}}({},{},{})`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#{:x}{:x}{:x}' }});"""
 
     vertices = lowpoly.triangles.points
     for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
-        expression = expression_layout.format( *[(vertices[i][0]-HalfWidth, -(vertices[i][1]-HalfHeight)) for i in triangle], *[i for i in color] )
+        expression = expression_layout.format(
+            *[(vertices[i][0]-HalfWidth, -(vertices[i][1]-HalfHeight)) for i in triangle],
+            *[i for i in color]
+        )
         expression_list.append(expression)
 
     if(browser):

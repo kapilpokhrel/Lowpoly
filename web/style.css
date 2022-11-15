@@ -1,0 +1,113 @@
+html, body {
+    height: 100%;
+    background-color: #afd3eb;
+}
+
+.input {
+    background-color: #f1f6f9;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
+
+.imageArea {
+    border: 3px dotted;
+    margin: 5px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Righteous';
+}
+
+.imageArea.active {
+    border: 3px solid #005fdd;
+}
+
+.imageArea .text {
+    width: 80%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.imageArea .button {
+    color: #005fdd;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.imageArea .button:hover {
+    cursor: pointer;
+}
+
+.params {
+    margin: 5px;
+}
+
+.ctrlButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctrlButtons button {
+    background-color: #afd3eb;
+    color: #414649;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 5px;
+    font-family: 'Ubuntu';
+    margin: 3px;
+}
+
+.output {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.output #calculator {
+    width: 50%;
+    height: 100%;
+    margin: 5px 5px 5px 5px;
+}
+
+#calculator:before {
+    content: "Some browser may not show gradual change and it may take some time.";
+    position: absolute;
+    z-index: 100;
+    padding: 1px;
+    font-size: 12px;
+    width: 80%;
+}
+
+.output .canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: 5px 5px 5px 0;
+    background-color:#f1f6f9;
+}
+
+@media screen and (max-width: 760px) {
+    .output {
+        flex-direction: column;
+    }
+
+    .output #calculator {
+        width: 100%;
+        height: 50%;
+    }
+
+    .output .canvas {
+        width: 100%;
+        height: 50%;
+    }
+}
