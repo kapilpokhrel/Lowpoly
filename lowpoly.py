@@ -203,7 +203,7 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
                 browser.execute_script("".join(current_expression_list))
     else:
         for expression in expression_list:
-            print(expression)
+            print(f"setTimeout(() => {{%s}}, 0);"%expression[:-1])
 
 if __name__=="__main__":
 
