@@ -46,13 +46,13 @@ html, body {
     margin: 5px;
 }
 
-.genButton {
+.ctrlButtons {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.genButton button {
+.ctrlButtons button {
     background-color: #afd3eb;
     color: #414649;
     border-radius: 5px;
@@ -60,6 +60,7 @@ html, body {
     font-size: 22px;
     padding: 5px;
     font-family: 'Ubuntu';
+    margin: 3px;
 }
 
 .output {

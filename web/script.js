@@ -1,11 +1,14 @@
 var width = null;
 var height = null;
 var imageFile = null;
+var expressions = "Hi";
 const imageArea = document.querySelector('.imageArea');
 const imageArea_text = document.querySelector('.imageArea .text');
 const browseButton = document.querySelector('.imageArea .button');
 const imageBrowser = document.getElementById("imageBrowser");
-const genButton = document.querySelector(".genButton button");
+const genButton = document.getElementById("genButton");
+const copyButton = document.getElementById("copyButton");
+const tooltipText = document.getElementById("tooltipText");
 const types = ['image/jpg', 'image/jpeg', 'image/png'];
 
 function canvasResize() {
@@ -77,6 +80,36 @@ function draw_on_desmos(data) {
         expressionsCollapsed: true
     });
 
+    expressions = "";
+    expressions = expressions.concat(`
+        Calc.setBlank();
+        var coords = Calc.graphpaperBounds.mathCoordinates;
+        var aRatio = coords.width / coords.height;
+        var xboundry, yboundry;
+
+        if (${width} > ${height}) {
+            {
+                xboundry = 50 + ${width};
+                yboundry = xboundry / aRatio;
+            }
+        } else {
+            {
+                yboundry = 50 + ${height};
+                xboundry = aRatio * yboundry;
+            }
+        }
+        Calc.setMathBounds({
+            left: -xboundry,
+            right: xboundry,
+            top: yboundry,
+            bottom: -yboundry
+        });
+        Calc.updateSettings({
+            xAxisNumbers: false,
+            yAxisNumbers: false,
+            expressionsCollapsed: true
+        });
+    `);
     //Drawing triangles
     for (let i = 0; i < triangles.length; i++) {
         let vertices = triangles[i].vertices;
@@ -107,13 +140,26 @@ function draw_on_desmos(data) {
             })},
             0
         );
+        expressions = expressions.concat(`
+            setTimeout(() => {
+                Calc.setExpression({
+                    latex: \`\\\\${latex}\`,
+                    fillOpacity: 1,
+                    fill: true,
+                    color: '${color}'
+                })},
+                0
+            );
+        `);
 
     }
-
 }
 
 function Process() {
     genButton.textContent = "Loading";
+    copyButton.hidden = true;
+    tooltipText.hidden = true;
+    tooltipText.textContent = "";
     if (imageFile == null)
         alert("Image not selected");
     else {
@@ -136,6 +182,8 @@ function Process() {
         generator.onmessage = function (msg) {
             draw_on_desmos(msg.data);
             genButton.textContent = "Generate";
+            copyButton.hidden = false;
+            tooltipText.hidden = false;
         };
     }
 }
@@ -144,6 +192,14 @@ canvasResize();
 window.onresize = canvasResize;
 browseButton.onclick = () => {
     imageBrowser.click();
+}
+
+copyButton.onclick = () => {
+    navigator.clipboard.writeText(expressions.replace(/[\t\n\r\s]+/g, " ")).then(function() {
+        tooltipText.textContent = "Paste the JS expressions in desmos devtool's console."
+    }, function(err) {
+        console.error('Could not Copy: ', err);
+    });
 }
 
 imageBrowser.addEventListener('change', (event) => {

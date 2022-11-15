@@ -26,7 +26,11 @@
             <label for="bg-points">No of background points: </label>
             <input type="number" id="bg-points" name="Background Points" min="1" max="1000" value="50"><br>
         </div>
-        <span class="genButton"><button onclick="Process()">Generate</button></span>
+        <div class="ctrlButtons">
+            <button onclick="Process()" id="genButton">Generate</button>
+            <button hidden id="copyButton">Copy JS</button>
+        </div>
+        <div id="tooltipText" style="font-size:10px; text-align:center;" hidden></div>
     </div>
     <div class="output">
         <div id="calculator"></div>
