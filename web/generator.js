@@ -1,6 +1,6 @@
 //Web Worker to generate triangles from image
-importScripts("image.min.js");
-importScripts("delaunay.js");
+importScripts("external-libs/image.min.js");
+importScripts("external-libs/delaunay.js");
 
 function get_points_from_sobel(grey_image, edge_points, bg_points){
     var blurred = grey_image.gaussianFilter({radius: 3, sigma:10});
