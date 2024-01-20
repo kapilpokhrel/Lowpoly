@@ -15,21 +15,21 @@ function canvasResize() {
     var testCanvas = document.getElementById("testCanvas");
     var canvasArea = document.querySelector('.output .canvas');
 
-    let clientWidth = canvasArea.clientWidth*95/100;
-    let clientHeight = canvasArea.clientHeight*95/100;
+    let clientWidth = canvasArea.clientWidth * 95 / 100;
+    let clientHeight = canvasArea.clientHeight * 95 / 100;
 
-    if(width == null){
+    if (width == null) {
         testCanvas.style.width = '100%';
         testCanvas.style.height = '100%';
     } else {
         if (width > height) {
             let canvasWidth = ~~Math.min(clientWidth, width);
-            canvasWidth = ~~Math.min(canvasWidth, (width/height)*(clientHeight));
+            canvasWidth = ~~Math.min(canvasWidth, (width / height) * (clientHeight));
             testCanvas.style.width = `${canvasWidth}px`;
             testCanvas.style.height = `${height / width * canvasWidth}px`;
         } else {
             let canvasHeight = ~~Math.min(clientHeight, height);
-            canvasHeight = ~~Math.min(canvasHeight, (height/width)*(clientWidth));
+            canvasHeight = ~~Math.min(canvasHeight, (height / width) * (clientWidth));
             testCanvas.style.height = `${canvasHeight}px`;
             testCanvas.style.width = `${width / height * canvasHeight}px`;
         }
@@ -114,16 +114,16 @@ function draw_on_desmos(data) {
     for (let i = 0; i < triangles.length; i++) {
         let vertices = triangles[i].vertices;
         let color = triangles[i].color;
-
+        let color2 = color;
         ctx.beginPath();
         ctx.moveTo(vertices[0].x, vertices[0].y);
         ctx.lineTo(vertices[1].x, vertices[1].y);
         ctx.lineTo(vertices[2].x, vertices[2].y);
         ctx.closePath();
 
-        color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+        color = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${color[3] / 255})`;
         ctx.fillStyle = color;
-        ctx.strokeStyle = color;
+        ctx.strokeStyle = "black";
         ctx.fill();
         ctx.stroke();
 
@@ -137,7 +137,8 @@ function draw_on_desmos(data) {
                 fillOpacity: 1,
                 fill: true,
                 color: color
-            })},
+            })
+        },
             0
         );
         expressions = expressions.concat(`
@@ -195,16 +196,16 @@ browseButton.onclick = () => {
 }
 
 copyButton.onclick = () => {
-    navigator.clipboard.writeText(expressions.replace(/[\t\n\r\s]+/g, " ")).then(function() {
+    navigator.clipboard.writeText(expressions.replace(/[\t\n\r\s]+/g, " ")).then(function () {
         tooltipText.textContent = "Paste the JS expressions in desmos devtool's console."
-    }, function(err) {
+    }, function (err) {
         console.error('Could not Copy: ', err);
     });
 }
 
 imageBrowser.addEventListener('change', (event) => {
     imageFile = event.target.files[0];
-    if(types.includes(imageFile.type))
+    if (types.includes(imageFile.type))
         imageArea_text.textContent = imageFile.name;
     else
         alert("File type not supported");
@@ -223,9 +224,9 @@ imageArea.addEventListener('dragleave', (event) => {
 
 imageArea.addEventListener('drop', (event) => {
     event.preventDefault();
-    
+
     imageFile = event.dataTransfer.files[0];
-    if(!types.includes(imageFile.type)) {
+    if (!types.includes(imageFile.type)) {
         imageFile = null;
         alert("File type not supported");
         imageArea_text.textContent = "Drag & Drop an image";
