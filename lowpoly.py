@@ -8,8 +8,8 @@ from argparse import ArgumentParser
 class LowPoly:
     def __init__(self, filename) -> None:
         #Open image as numpy array
-        self.image = np.array(Image.open(filename).convert('RGB'))
-        self.grayscale_image = self.image.dot([0.07, 0.72, 0.21]).astype("uint8")
+        self.image = np.array(Image.open(filename).convert('RGBA'))
+        self.grayscale_image = self.image[:,:,:3].dot([0.07, 0.72, 0.21]).astype("uint8")
         self.shape = self.grayscale_image.shape
         self.height, self.width = self.shape[:2]
 
@@ -102,29 +102,31 @@ class LowPoly:
         triangles_per_coord = self.triangles.find_simplex(pixel_coords)
 
         '''
-            triangle |  r  |  g  |  b  |
-                0    | 244 | 156 | 23  |
-                1    | 242 | 256 | 22  |
-                0    | 234 | 100 | 28  |
-                2    | 123 | 199 | 23  |
+            triangle |  r  |  g  |  b  | a |
+                0    | 244 | 156 | 23  | 1 |
+                1    | 242 | 256 | 22  | 1 |
+                0    | 234 | 100 | 28  | 1 |
+                2    | 123 | 199 | 23  | 1 |
             
             Create Pandas dataframe of each pixel in above format
             to easily group each pixel by the triangle they belong to and
             calculate the median of rgb values of each pixel on that each triangle.
         '''
+        reshaped_image = self.image.reshape(-1, 4)
         df = pd.DataFrame({
             "triangle": triangles_per_coord,
-            "r": self.image.reshape(-1, 3)[:, 0],
-            "g": self.image.reshape(-1, 3)[:, 1],
-            "b": self.image.reshape(-1, 3)[:, 2]
+            "r": reshaped_image[:, 0],
+            "g": reshaped_image[:, 1],
+            "b": reshaped_image[:, 2],
+            "a": reshaped_image[:, 3]
         })
 
         n_triangles = self.triangles.simplices.shape[0]
 
         color_per_triangle = (
             df
-                .groupby("triangle")[["r", "g", "b"]]
-                .aggregate(np.median)
+                .groupby("triangle")[["r", "g", "b", "a"]]
+                .aggregate("median")
                 .reindex(range(n_triangles), fill_value=0)
         )
 
@@ -196,10 +198,12 @@ def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
         latex: `\\\operatorname{{polygon}}({},{},{})`,
         fillOpacity: '1',
         fill: 'true',
-        color: '#{:x}{:x}{:x}' }});"""
+        color: '#{:02X}{:02X}{:02X}{:02X}' }});"""
 
     vertices = lowpoly.triangles.points
     for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
+        if color[3] < 30:
+            continue
         expression = expression_layout.format(
             *[(vertices[i][0]-HalfWidth, -(vertices[i][1]-HalfHeight)) for i in triangle],
             *[i for i in color]

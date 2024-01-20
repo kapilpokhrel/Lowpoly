@@ -1,0 +1,3258 @@
+
+        Calc.updateSettings({
+            xAxisNumbers: false,
+            yAxisNumbers: false,
+            expressionsCollapsed: true
+        });
+    
+
+            var coords = Calc.graphpaperBounds.mathCoordinates;
+            var aRatio = coords.width/coords.height;
+            var hWidth = 640.0;
+            var hHeight = 425.0;
+            var xboundry, yboundry;
+            
+            if(hWidth > hHeight) {
+                xboundry = 50 + hWidth;
+                yboundry = xboundry/aRatio;
+            } else {
+                yboundry = 50 + hHeight;
+                xboundry = aRatio*yboundry;
+            }
+            Calc.setMathBounds({
+                left: -xboundry,
+                right: xboundry,
+                top: yboundry,
+                bottom: -yboundry
+            });
+        
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-441.0, 22.0),(-418.0, 8.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F1958EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-418.0, 35.0),(-399.0, 26.0),(-418.0, 8.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D53931FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-418.0, 35.0),(-441.0, 22.0),(-436.0, 41.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D02528FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-441.0, 22.0),(-418.0, 35.0),(-418.0, 8.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D52B27FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-418.0, 8.0),(-430.0, -26.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF8A84FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-43.0, -273.0),(-41.0, -225.0),(-1.0, -232.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C10001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-165.0, -173.0),(-193.0, -202.0),(-197.0, -198.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED8683FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-478.0, 21.0),(-518.0, 1.0),(-498.0, 31.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B71A23FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-535.0, 43.0),(-564.0, 26.0),(-563.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C12428FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-400.0, -6.0),(-430.0, -26.0),(-418.0, 8.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F29892FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-399.0, 26.0),(-400.0, -6.0),(-418.0, 8.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D01118FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-386.0, 13.0),(-400.0, -6.0),(-399.0, 26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D22627FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((481.0, -33.0),(467.0, -51.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C81C1CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((453.0, -91.0),(467.0, -51.0),(485.0, -72.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E04E4EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((481.0, -33.0),(485.0, -6.0),(512.0, -34.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D93C3CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((485.0, -6.0),(481.0, -33.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C50B0DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((370.0, -14.0),(393.0, 13.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C20101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-309.0, -69.0),(-292.0, -111.0),(-333.0, -118.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F49F9CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-412.0, -123.0),(-427.0, -102.0),(-426.0, -101.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C19B9BC3' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((516.0, 256.0),(562.0, 257.0),(559.0, 228.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A2BB5BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((562.0, 257.0),(565.0, 269.0),(559.0, 228.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CCD9AF88' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-593.0, 52.0),(-583.0, 33.0),(-595.0, 37.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CA6766FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-23.0, -123.0),(-21.0, -121.0),(5.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FFD6D228' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-41.0, -225.0),(-16.0, -215.0),(-1.0, -232.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D11424FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-16.0, -215.0),(-41.0, -225.0),(-41.0, -201.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D62230FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-57.0, -227.0),(-41.0, -225.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BE0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-104.0, -265.0),(-57.0, -227.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-57.0, -227.0),(-104.0, -265.0),(-79.0, -220.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC0002FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-41.0, -225.0),(-57.0, -227.0),(-41.0, -201.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D52530FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-193.0, -202.0),(-228.0, -190.0),(-197.0, -198.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D73237FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-116.0, -141.0),(-148.0, -132.0),(-120.0, -109.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E44236FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-148.0, -132.0),(-116.0, -141.0),(-142.0, -157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA9C95FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-99.0, -218.0),(-104.0, -265.0),(-116.0, -221.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B70101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-104.0, -265.0),(-99.0, -218.0),(-79.0, -220.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-148.0, -132.0),(-137.0, -108.0),(-120.0, -109.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E34D41FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-137.0, -108.0),(-148.0, -132.0),(-152.0, -100.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E24F41FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-165.0, -173.0),(-168.0, -208.0),(-193.0, -202.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EC8281FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-168.0, -208.0),(-165.0, -173.0),(-152.0, -212.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EC8580FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-177.0, -143.0),(-148.0, -132.0),(-142.0, -157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F68D87FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-165.0, -173.0),(-177.0, -143.0),(-142.0, -157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E95F5DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-479.0, -33.0),(-461.0, 10.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C43035FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-461.0, 10.0),(-441.0, 22.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EE8680FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-478.0, 21.0),(-495.0, -15.0),(-518.0, 1.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A92D2EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-461.0, 10.0),(-495.0, -15.0),(-478.0, 21.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB1C24FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-495.0, -15.0),(-461.0, 10.0),(-479.0, -33.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B7393BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-441.0, 22.0),(-450.0, 48.0),(-436.0, 41.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D12D27FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-461.0, 10.0),(-450.0, 48.0),(-441.0, 22.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF8881FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-450.0, 48.0),(-461.0, 10.0),(-478.0, 21.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED847CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-469.0, 53.0),(-478.0, 21.0),(-498.0, 31.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED847CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-493.0, 62.0),(-469.0, 53.0),(-498.0, 31.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E25E4FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-469.0, 53.0),(-450.0, 48.0),(-478.0, 21.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E15142FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-535.0, 43.0),(-547.0, 19.0),(-564.0, 26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#93030EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-509.0, 35.0),(-493.0, 62.0),(-498.0, 31.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EB8079FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-546.0, 69.0),(-535.0, 43.0),(-563.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DC6158FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-366.0, 5.0),(-400.0, -6.0),(-386.0, 13.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D12325FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-467.0, -47.0),(-479.0, -33.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B94546FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-430.0, -26.0),(-440.0, -42.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D33D3FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-440.0, -42.0),(-467.0, -47.0),(-448.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C53D40FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((467.0, -51.0),(438.0, -60.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C31413FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -55.0),(481.0, -33.0),(512.0, -34.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE5451FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((467.0, -51.0),(502.0, -55.0),(485.0, -72.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E4605BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -55.0),(467.0, -51.0),(481.0, -33.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE5852FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((534.0, -71.0),(538.0, -62.0),(559.0, -38.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DEB2B282' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((538.0, -62.0),(502.0, -55.0),(512.0, -34.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D54142FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -55.0),(538.0, -62.0),(534.0, -71.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D86865FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -55.0),(510.0, -90.0),(485.0, -72.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D74947FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((510.0, -90.0),(502.0, -55.0),(534.0, -71.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D76A64FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((556.0, -36.0),(538.0, -62.0),(512.0, -34.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D75954FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((538.0, -62.0),(556.0, -36.0),(559.0, -38.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0A0A0FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((328.0, 94.0),(312.0, 66.0),(296.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D39892FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((379.0, 4.0),(393.0, 13.0),(370.0, -14.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D61725FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((487.0, 137.0),(471.0, 125.0),(473.0, 162.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#84641AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((513.0, 113.0),(545.0, 144.0),(548.0, 140.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#83A73CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 152.0),(545.0, 144.0),(513.0, 113.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#7FA62BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-266.0, -130.0),(-298.0, -141.0),(-292.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F29691FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-329.0, -59.0),(-298.0, -38.0),(-309.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA2424FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-341.0, -155.0),(-350.0, -130.0),(-333.0, -118.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C83034FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-362.0, -174.0),(-349.0, -188.0),(-383.0, -158.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DDC1C15A' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-349.0, -188.0),(-362.0, -174.0),(-341.0, -155.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#96272AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((519.0, 274.0),(562.0, 257.0),(516.0, 256.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#98B35CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((562.0, 257.0),(519.0, 274.0),(565.0, 269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#99B655FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((562.0, 300.0),(521.0, 305.0),(561.0, 313.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#94B351FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((536.0, 350.0),(508.0, 341.0),(511.0, 358.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B6C25FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((379.0, -196.0),(349.0, -148.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B20101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((263.0, -168.0),(255.0, -218.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B90000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((294.0, -269.0),(293.0, -267.0),(317.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D1898AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -267.0),(287.0, -251.0),(317.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C4494CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((12.0, -269.0),(-43.0, -273.0),(-1.0, -232.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-579.0, 62.0),(-583.0, 33.0),(-593.0, 52.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AB0A14FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-564.0, 26.0),(-579.0, 62.0),(-563.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B82527FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-583.0, 33.0),(-579.0, 62.0),(-564.0, 26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A01419FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-10.0, -171.0),(-39.0, -151.0),(-23.0, -123.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF6250FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((12.0, -154.0),(-23.0, -123.0),(5.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E66354FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((12.0, -154.0),(-10.0, -171.0),(-23.0, -123.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF6350FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((12.0, -269.0),(-16.0, -322.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9C0000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-72.0, -313.0),(-104.0, -265.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#910001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-132.0, -298.0),(-104.0, -265.0),(-105.0, -304.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#850102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-104.0, -265.0),(-132.0, -298.0),(-135.0, -297.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#820106FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-152.0, -212.0),(-162.0, -287.0),(-182.0, -280.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#910101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-162.0, -287.0),(-152.0, -212.0),(-116.0, -221.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AE0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-104.0, -265.0),(-162.0, -287.0),(-116.0, -221.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9D0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-228.0, -151.0),(-213.0, -111.0),(-206.0, -153.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF7774FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-85.0, -117.0),(-74.0, -121.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E66051FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-57.0, -227.0),(-65.0, -195.0),(-41.0, -201.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA303AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-65.0, -195.0),(-57.0, -227.0),(-79.0, -220.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D82F39FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-189.0, -276.0),(-218.0, -263.0),(-193.0, -202.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#900102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-168.0, -208.0),(-189.0, -276.0),(-193.0, -202.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AE0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-243.0, -257.0),(-189.0, -276.0),(-182.0, -280.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC8484FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-189.0, -276.0),(-243.0, -257.0),(-218.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA7777FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-189.0, -276.0),(-152.0, -212.0),(-182.0, -280.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#930101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-189.0, -276.0),(-168.0, -208.0),(-152.0, -212.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AE0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-177.0, -143.0),(-188.0, -163.0),(-206.0, -153.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E14A4BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-188.0, -163.0),(-177.0, -143.0),(-165.0, -173.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E65959FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-188.0, -163.0),(-165.0, -173.0),(-197.0, -198.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EE8A85FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-213.0, -111.0),(-190.0, -119.0),(-206.0, -153.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F79690FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-190.0, -119.0),(-177.0, -143.0),(-206.0, -153.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F17371FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-228.0, -190.0),(-245.0, -254.0),(-256.0, -242.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8E0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-245.0, -254.0),(-271.0, -237.0),(-256.0, -242.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A74C4CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-271.0, -237.0),(-245.0, -254.0),(-243.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C58B8DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-243.0, -257.0),(-245.0, -254.0),(-218.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C09093FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-218.0, -263.0),(-245.0, -254.0),(-193.0, -202.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#920102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-245.0, -254.0),(-228.0, -190.0),(-193.0, -202.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AC0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-518.0, 1.0),(-522.0, 4.0),(-498.0, 31.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9C101AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-522.0, 4.0),(-509.0, 35.0),(-498.0, 31.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30C1AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-522.0, 4.0),(-547.0, 19.0),(-535.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#91020EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-509.0, 35.0),(-522.0, 4.0),(-535.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B20517FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-520.0, 65.0),(-509.0, 35.0),(-535.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E66F6BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-546.0, 69.0),(-520.0, 65.0),(-535.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD6456FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-467.0, -48.0),(-440.0, -42.0),(-452.0, -68.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A94442FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-440.0, -42.0),(-467.0, -48.0),(-467.0, -47.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A53D41FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-440.0, -42.0),(-441.0, -82.0),(-452.0, -68.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A23F3FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-427.0, -102.0),(-441.0, -82.0),(-426.0, -101.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF9091E0' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-410.0, -49.0),(-440.0, -42.0),(-430.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D2383BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-400.0, -6.0),(-410.0, -49.0),(-430.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F1938DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-410.0, -49.0),(-441.0, -82.0),(-440.0, -42.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CB4544FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((453.0, -91.0),(445.0, -84.0),(467.0, -51.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D1222BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((445.0, -84.0),(438.0, -60.0),(467.0, -51.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C81F1DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((445.0, -84.0),(447.0, -138.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B10002FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((447.0, -138.0),(445.0, -84.0),(453.0, -91.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C1011AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((391.0, -65.0),(344.0, -21.0),(370.0, -14.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BD0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((391.0, -65.0),(370.0, -14.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((438.0, -60.0),(391.0, -65.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((445.0, -84.0),(391.0, -65.0),(438.0, -60.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -102.0),(510.0, -90.0),(499.0, -112.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DAA8A9CF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((510.0, -90.0),(502.0, -102.0),(485.0, -72.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D8645CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -102.0),(453.0, -91.0),(485.0, -72.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D54142FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((578.0, 18.0),(574.0, -5.0),(543.0, 9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E2655EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((574.0, -5.0),(570.0, -13.0),(543.0, 9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E26C65FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((556.0, -36.0),(570.0, -13.0),(559.0, -38.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E1A5A5FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((567.0, 81.0),(541.0, 57.0),(529.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DF3C32FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((541.0, 57.0),(567.0, 81.0),(570.0, 53.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E05049FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((526.0, -13.0),(485.0, -6.0),(499.0, 24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E44C48FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((531.0, 20.0),(526.0, -13.0),(499.0, 24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E7544EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((485.0, -6.0),(526.0, -13.0),(512.0, -34.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DB3D3CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((526.0, -13.0),(531.0, 20.0),(543.0, 9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E54D4AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((526.0, -13.0),(556.0, -36.0),(512.0, -34.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF252CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((570.0, -13.0),(526.0, -13.0),(543.0, 9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD4241FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((526.0, -13.0),(570.0, -13.0),(556.0, -36.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DC605BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((338.0, -243.0),(348.0, -244.0),(317.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DFACAB93' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((348.0, -244.0),(338.0, -243.0),(351.0, -217.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC6761FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((402.0, 46.0),(369.0, 56.0),(405.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E64949FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((369.0, 56.0),(374.0, 90.0),(405.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED625FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((298.0, 43.0),(312.0, 66.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB040EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((312.0, 66.0),(298.0, 43.0),(296.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D58682FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((294.0, 19.0),(298.0, 43.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B50104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((298.0, 43.0),(294.0, 19.0),(296.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC5B59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((393.0, 13.0),(410.0, 19.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C60103FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((402.0, 46.0),(410.0, 19.0),(393.0, 13.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE2E32FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((471.0, 125.0),(455.0, 156.0),(473.0, 162.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B55E17FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((542.0, 110.0),(513.0, 113.0),(548.0, 140.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#88A548FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((510.0, 234.0),(516.0, 256.0),(559.0, 228.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9BB557FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((552.0, 201.0),(510.0, 234.0),(559.0, 228.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9CB855FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((510.0, 234.0),(552.0, 201.0),(505.0, 219.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#93B04CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((552.0, 201.0),(550.0, 188.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9BB952FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((505.0, 219.0),(552.0, 201.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#90B24CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((550.0, 188.0),(546.0, 172.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#94B352FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((546.0, 172.0),(517.0, 152.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8CB046FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 152.0),(546.0, 172.0),(545.0, 144.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#7EA632FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 152.0),(502.0, 122.0),(487.0, 137.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A3A158FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, 122.0),(517.0, 152.0),(513.0, 113.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A7AA5DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((495.0, 98.0),(502.0, 122.0),(513.0, 113.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D10804FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, 122.0),(471.0, 125.0),(487.0, 137.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF551EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, 122.0),(495.0, 98.0),(471.0, 125.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA3C2DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-298.0, -38.0),(-292.0, -44.0),(-309.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DB392FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-292.0, -44.0),(-265.0, -55.0),(-269.0, -57.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EDB2A999' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-275.0, -85.0),(-266.0, -130.0),(-292.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F49B98FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-275.0, -85.0),(-249.0, -94.0),(-266.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F7A09CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-275.0, -85.0),(-269.0, -57.0),(-246.0, -63.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DF3B33FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-249.0, -94.0),(-275.0, -85.0),(-246.0, -63.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE282BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-292.0, -111.0),(-313.0, -132.0),(-333.0, -118.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F29590FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-298.0, -141.0),(-313.0, -132.0),(-292.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F08C89FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-313.0, -132.0),(-341.0, -155.0),(-333.0, -118.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C9212CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-341.0, -155.0),(-313.0, -132.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C02A31FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-313.0, -132.0),(-298.0, -141.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C20A1AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-289.0, -158.0),(-289.0, -191.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC1C28FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-298.0, -141.0),(-289.0, -158.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C10A1EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-289.0, -191.0),(-289.0, -158.0),(-265.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BE0316FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-289.0, -158.0),(-298.0, -141.0),(-266.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EE8B86FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-329.0, -59.0),(-319.0, -29.0),(-298.0, -38.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D41C1FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-319.0, -29.0),(-348.0, -45.0),(-333.0, -16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D42328FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-319.0, -29.0),(-329.0, -59.0),(-348.0, -45.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D5121BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-381.0, -154.0),(-350.0, -130.0),(-341.0, -155.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AE2B31FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-381.0, -154.0),(-362.0, -174.0),(-383.0, -158.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB8183FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-362.0, -174.0),(-381.0, -154.0),(-341.0, -155.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#931A23FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-403.0, -133.0),(-381.0, -154.0),(-383.0, -158.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF8F93E3' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-340.0, -191.0),(-341.0, -155.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9A0C1EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-340.0, -191.0),(-349.0, -188.0),(-341.0, -155.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#972328FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-289.0, -191.0),(-322.0, -209.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9D081DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-304.0, -220.0),(-322.0, -209.0),(-289.0, -191.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#941E24FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-322.0, -209.0),(-340.0, -191.0),(-313.0, -177.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9A1D25FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-340.0, -191.0),(-322.0, -209.0),(-349.0, -188.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C69699D2' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((536.0, 350.0),(517.0, 318.0),(508.0, 341.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A0B75CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((358.0, -10.0),(344.0, -21.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E85C5AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((344.0, -21.0),(358.0, -10.0),(370.0, -14.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C8050FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((358.0, -10.0),(379.0, 4.0),(370.0, -14.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA262EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((305.0, -19.0),(272.0, 9.0),(294.0, 19.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB010CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((272.0, 9.0),(305.0, -19.0),(262.0, -5.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C21620FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((244.0, -25.0),(260.0, -69.0),(225.0, -43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C61623FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((272.0, 9.0),(244.0, -25.0),(225.0, -43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EABFBE63' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((244.0, -25.0),(272.0, 9.0),(262.0, -5.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E19792FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -188.0),(255.0, -218.0),(263.0, -168.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB0100FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -188.0),(379.0, -196.0),(351.0, -217.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AB0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -188.0),(349.0, -148.0),(379.0, -196.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AD0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((161.0, -86.0),(139.0, -99.0),(118.0, -104.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EDB7B1FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((56.0, -321.0),(51.0, -239.0),(95.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B00000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((51.0, -239.0),(56.0, -321.0),(12.0, -269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AF0000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((123.0, -311.0),(99.0, -324.0),(95.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9C0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((123.0, -311.0),(95.0, -263.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AD0000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((139.0, -99.0),(127.0, -139.0),(118.0, -104.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E55348FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((217.0, -103.0),(195.0, -116.0),(175.0, -79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA2B2AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((230.0, -155.0),(263.0, -168.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-74.0, -121.0),(-54.0, -123.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E76351FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-54.0, -123.0),(-39.0, -151.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E94B3CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-39.0, -151.0),(-54.0, -123.0),(-23.0, -123.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E65F4FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-30.0, -172.0),(-39.0, -151.0),(-10.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA8D87FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-30.0, -172.0),(-16.0, -215.0),(-41.0, -201.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CA0110FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-16.0, -215.0),(-30.0, -172.0),(-10.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF010CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-30.0, -321.0),(-45.0, -319.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8F0103FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-16.0, -322.0),(-30.0, -321.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8F0104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-30.0, -321.0),(-16.0, -322.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C58384FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -324.0),(12.0, -269.0),(11.0, -324.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#930101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -324.0),(-16.0, -322.0),(12.0, -269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#940101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -324.0),(11.0, -324.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CEA6ABA4' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-16.0, -322.0),(6.0, -324.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C59091FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-45.0, -319.0),(-67.0, -316.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#900207FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-67.0, -316.0),(-72.0, -313.0),(-43.0, -273.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#880106FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-104.0, -265.0),(-94.0, -308.0),(-105.0, -304.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#880102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-72.0, -313.0),(-94.0, -308.0),(-104.0, -265.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#880104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-67.0, -316.0),(-94.0, -308.0),(-72.0, -313.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C08A8DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-94.0, -308.0),(-132.0, -298.0),(-105.0, -304.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC6F6FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-158.0, -289.0),(-104.0, -265.0),(-135.0, -297.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#850002FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-158.0, -289.0),(-162.0, -287.0),(-104.0, -265.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#860102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-162.0, -287.0),(-158.0, -289.0),(-182.0, -280.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B66B6CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -186.0),(-228.0, -151.0),(-228.0, -190.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF8A87FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -186.0),(-289.0, -191.0),(-265.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B70104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -186.0),(-271.0, -237.0),(-289.0, -191.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A70007FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -186.0),(-228.0, -190.0),(-256.0, -242.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AE0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-271.0, -237.0),(-248.0, -186.0),(-256.0, -242.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#910003FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-223.0, -188.0),(-228.0, -151.0),(-206.0, -153.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F19490FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-228.0, -151.0),(-223.0, -188.0),(-228.0, -190.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF8A88FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-228.0, -190.0),(-223.0, -188.0),(-197.0, -198.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D63036FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-223.0, -188.0),(-188.0, -163.0),(-197.0, -198.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED8783FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-188.0, -163.0),(-223.0, -188.0),(-206.0, -153.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF8885FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-228.0, -151.0),(-248.0, -124.0),(-213.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F28A85FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -124.0),(-228.0, -151.0),(-266.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EE7E7BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-249.0, -94.0),(-248.0, -124.0),(-266.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F69B97FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-288.0, -230.0),(-304.0, -220.0),(-289.0, -191.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#931F25FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-271.0, -237.0),(-288.0, -230.0),(-289.0, -191.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8E111BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-288.0, -230.0),(-271.0, -237.0),(-243.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B77B7BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-116.0, -141.0),(-102.0, -116.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E5443CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-102.0, -116.0),(-85.0, -117.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E66051FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-102.0, -116.0),(-116.0, -141.0),(-120.0, -109.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E24B40FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-39.0, -151.0),(-51.0, -168.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA968EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-30.0, -172.0),(-51.0, -168.0),(-39.0, -151.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F98D86FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-65.0, -195.0),(-51.0, -168.0),(-41.0, -201.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC0417FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-51.0, -168.0),(-30.0, -172.0),(-41.0, -201.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF0311FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-95.0, -167.0),(-116.0, -141.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA9D96FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-95.0, -167.0),(-100.0, -168.0),(-116.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F9928DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-116.0, -141.0),(-131.0, -181.0),(-142.0, -157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F27F7BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-100.0, -168.0),(-131.0, -181.0),(-116.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F1706EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-131.0, -181.0),(-165.0, -173.0),(-142.0, -157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E86260FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-165.0, -173.0),(-131.0, -181.0),(-152.0, -212.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED827FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-166.0, -101.0),(-190.0, -119.0),(-182.0, -90.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E03E36FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-509.0, 35.0),(-507.0, 65.0),(-493.0, 62.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E76960FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-520.0, 65.0),(-507.0, 65.0),(-509.0, 35.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E16559FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-379.0, -24.0),(-410.0, -49.0),(-400.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F39A94FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-366.0, 5.0),(-379.0, -24.0),(-400.0, -6.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D31D21FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-379.0, -24.0),(-366.0, 5.0),(-361.0, 3.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D22527FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-349.0, -9.0),(-379.0, -24.0),(-361.0, 3.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D32325FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((401.0, -190.0),(421.0, -190.0),(412.0, -205.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D27A7BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((401.0, -190.0),(379.0, -196.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AC0107FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((461.0, -115.0),(447.0, -138.0),(453.0, -91.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB041CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((502.0, -102.0),(461.0, -115.0),(453.0, -91.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CD2D33FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((328.0, -42.0),(391.0, -65.0),(319.0, -55.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB0102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((391.0, -65.0),(328.0, -42.0),(344.0, -21.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF0102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((496.0, 48.0),(541.0, 57.0),(531.0, 20.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FB9082FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((496.0, 48.0),(531.0, 20.0),(499.0, 24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F37063FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((496.0, 48.0),(495.0, 50.0),(529.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA8275FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((541.0, 57.0),(496.0, 48.0),(529.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FDA596FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((547.0, 43.0),(541.0, 57.0),(570.0, 53.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E13A33FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((541.0, 57.0),(547.0, 43.0),(531.0, 20.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FEAFA5FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((531.0, 20.0),(547.0, 43.0),(543.0, 9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA968BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((547.0, 43.0),(570.0, 53.0),(581.0, 36.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0554DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((578.0, 18.0),(547.0, 43.0),(581.0, 36.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E15C56FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((547.0, 43.0),(578.0, 18.0),(543.0, 9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E55D56FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((392.0, -213.0),(383.0, -223.0),(379.0, -196.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC6161FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((392.0, -213.0),(401.0, -190.0),(412.0, -205.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D27473FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((401.0, -190.0),(392.0, -213.0),(379.0, -196.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC3333FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((379.0, -196.0),(365.0, -229.0),(351.0, -217.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF2C36FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((383.0, -223.0),(365.0, -229.0),(379.0, -196.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CB6466FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((365.0, -229.0),(348.0, -244.0),(351.0, -217.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC6462FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((294.0, 19.0),(282.0, 18.0),(296.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF5754FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((282.0, 18.0),(272.0, 9.0),(296.0, 43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE9A96FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((272.0, 9.0),(282.0, 18.0),(294.0, 19.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D1504CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-219.0, -78.0),(-197.0, -88.0),(-213.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DF3D34FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-197.0, -88.0),(-219.0, -78.0),(-182.0, -90.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ECB4AE8B' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-197.0, -88.0),(-190.0, -119.0),(-213.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0322EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-190.0, -119.0),(-197.0, -88.0),(-182.0, -90.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DF3D35FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((321.0, 77.0),(312.0, 66.0),(328.0, 94.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D88985FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((312.0, 66.0),(352.0, 27.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B70102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((352.0, 27.0),(358.0, -10.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E04547FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((358.0, -10.0),(352.0, 27.0),(379.0, 4.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E95B59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((398.0, 115.0),(422.0, 84.0),(405.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F87971FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((374.0, 90.0),(398.0, 115.0),(405.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F57770FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((422.0, 84.0),(398.0, 115.0),(408.0, 122.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FE948BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((385.0, 151.0),(398.0, 115.0),(370.0, 144.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA4135FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((398.0, 115.0),(385.0, 151.0),(408.0, 122.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E23B33FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((341.0, 117.0),(341.0, 116.0),(328.0, 94.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DB9A99FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((445.0, 83.0),(459.0, 108.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FC8378FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((459.0, 108.0),(495.0, 98.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FE9083FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((495.0, 98.0),(459.0, 108.0),(471.0, 125.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FE948AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((477.0, 17.0),(485.0, -6.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C8050AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((410.0, 19.0),(477.0, 17.0),(443.0, -26.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C80102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((485.0, -6.0),(477.0, 17.0),(499.0, 24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD3031FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((477.0, 17.0),(496.0, 48.0),(499.0, 24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E12426FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((496.0, 48.0),(477.0, 17.0),(495.0, 50.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E52423FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((495.0, 50.0),(477.0, 17.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D70102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((421.0, 44.0),(410.0, 19.0),(402.0, 46.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D60919FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((445.0, 83.0),(421.0, 44.0),(422.0, 84.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA070EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((421.0, 44.0),(477.0, 17.0),(410.0, 19.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC0102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((422.0, 84.0),(421.0, 44.0),(405.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DB181FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((421.0, 44.0),(402.0, 46.0),(405.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA1420FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((421.0, 44.0),(445.0, 83.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D9030AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((477.0, 17.0),(421.0, 44.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D00001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((385.0, 151.0),(413.0, 155.0),(408.0, 122.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E15746FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((413.0, 155.0),(385.0, 151.0),(413.0, 157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD827BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((542.0, 110.0),(517.0, 83.0),(513.0, 113.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C61204FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 83.0),(495.0, 98.0),(513.0, 113.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE140BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((495.0, 50.0),(517.0, 83.0),(529.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F96B5AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((552.0, 95.0),(567.0, 81.0),(529.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D15D2FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 83.0),(552.0, 95.0),(529.0, 70.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D90304FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((552.0, 95.0),(517.0, 83.0),(542.0, 110.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CA682CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((567.0, 81.0),(552.0, 95.0),(570.0, 91.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9B8F65FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((501.0, 208.0),(505.0, 219.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#84A645FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((493.0, 190.0),(501.0, 208.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#86A844FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 152.0),(483.0, 173.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8DB04CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((483.0, 173.0),(493.0, 190.0),(519.0, 182.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#8EAF4CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((483.0, 173.0),(487.0, 137.0),(473.0, 162.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#678E27FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((483.0, 173.0),(517.0, 152.0),(487.0, 137.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#82A13FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-223.0, -76.0),(-249.0, -94.0),(-246.0, -63.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DC4136FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-237.0, -102.0),(-219.0, -78.0),(-213.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0312CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -124.0),(-237.0, -102.0),(-213.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F8A19CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-237.0, -102.0),(-248.0, -124.0),(-249.0, -94.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F8A39EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-237.0, -102.0),(-223.0, -76.0),(-219.0, -78.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE3C38FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-223.0, -76.0),(-237.0, -102.0),(-249.0, -94.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE2A28FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-275.0, -85.0),(-292.0, -77.0),(-269.0, -57.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE2F28FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-292.0, -44.0),(-292.0, -77.0),(-309.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD2C2AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-292.0, -77.0),(-292.0, -44.0),(-269.0, -57.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DC322BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-292.0, -77.0),(-292.0, -111.0),(-309.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F69F9BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-292.0, -77.0),(-275.0, -85.0),(-292.0, -111.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F69F99FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-349.0, -108.0),(-309.0, -69.0),(-333.0, -118.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F39993FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-349.0, -108.0),(-329.0, -59.0),(-309.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F49995FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-350.0, -130.0),(-349.0, -108.0),(-333.0, -118.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C81B29FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-329.0, -59.0),(-364.0, -76.0),(-348.0, -45.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F49F9BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-349.0, -108.0),(-364.0, -76.0),(-329.0, -59.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F39A97FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-364.0, -76.0),(-349.0, -108.0),(-369.0, -89.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E9736FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-374.0, -128.0),(-381.0, -154.0),(-403.0, -133.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9B2C2FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-381.0, -154.0),(-374.0, -128.0),(-350.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AB2F32FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-374.0, -128.0),(-349.0, -108.0),(-350.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D04344FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-349.0, -108.0),(-374.0, -128.0),(-369.0, -89.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D13A3DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-441.0, -82.0),(-399.0, -84.0),(-426.0, -101.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A63F40FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-410.0, -49.0),(-399.0, -84.0),(-441.0, -82.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C94444FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-321.0, -211.0),(-322.0, -209.0),(-304.0, -220.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C09192DD' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((562.0, 300.0),(520.0, 279.0),(521.0, 305.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#91AE59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((565.0, 288.0),(520.0, 279.0),(562.0, 300.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#95B45DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((519.0, 274.0),(520.0, 279.0),(565.0, 269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#94B157FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((520.0, 279.0),(565.0, 288.0),(565.0, 269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#94B35AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((521.0, 305.0),(557.0, 331.0),(561.0, 313.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#94B353FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 318.0),(557.0, 331.0),(521.0, 305.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#90AE57FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((557.0, 331.0),(536.0, 350.0),(551.0, 347.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A9BC64FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((557.0, 331.0),(517.0, 318.0),(536.0, 350.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#95B457FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((344.0, -21.0),(319.0, -9.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE343BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -9.0),(294.0, 19.0),(329.0, 16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B80102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -9.0),(305.0, -19.0),(294.0, 19.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC0105FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((328.0, -42.0),(319.0, -9.0),(344.0, -21.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E54C4CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -9.0),(328.0, -42.0),(305.0, -19.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E85A5BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((281.0, -47.0),(284.0, -77.0),(260.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E75052FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((296.0, -155.0),(319.0, -188.0),(263.0, -168.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0002FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -188.0),(296.0, -155.0),(349.0, -148.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((296.0, -155.0),(329.0, -105.0),(349.0, -148.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B00001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((296.0, -155.0),(263.0, -168.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C3010BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, -105.0),(296.0, -155.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B50101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((255.0, -218.0),(315.0, -239.0),(287.0, -251.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AB0000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((319.0, -188.0),(315.0, -239.0),(255.0, -218.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B70000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((287.0, -251.0),(315.0, -239.0),(317.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB2730FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((315.0, -239.0),(338.0, -243.0),(317.0, -257.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CA5B59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((338.0, -243.0),(315.0, -239.0),(351.0, -217.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C2373AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((315.0, -239.0),(319.0, -188.0),(351.0, -217.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#AB0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((160.0, -298.0),(123.0, -311.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9C0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((138.0, -318.0),(160.0, -298.0),(154.0, -316.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C35A59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((123.0, -311.0),(160.0, -298.0),(138.0, -318.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B12B31FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((192.0, -222.0),(216.0, -284.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B20000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((192.0, -222.0),(170.0, -152.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((255.0, -218.0),(192.0, -222.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B90000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((253.0, -272.0),(255.0, -218.0),(287.0, -251.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A60000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((253.0, -272.0),(192.0, -222.0),(255.0, -218.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((192.0, -222.0),(253.0, -272.0),(216.0, -284.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A40000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((32.0, -326.0),(56.0, -321.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC6160FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((56.0, -321.0),(32.0, -326.0),(12.0, -269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#960101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((11.0, -324.0),(32.0, -326.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C98287FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((12.0, -269.0),(32.0, -326.0),(11.0, -324.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#980101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((56.0, -321.0),(58.0, -323.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B54E4EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((99.0, -324.0),(78.0, -325.0),(95.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9F0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((78.0, -325.0),(56.0, -321.0),(95.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9B0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((78.0, -325.0),(58.0, -323.0),(56.0, -321.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B3494AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((78.0, -325.0),(99.0, -324.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C97D7BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((58.0, -323.0),(78.0, -325.0),(31.0, -331.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF6D69FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((40.0, -222.0),(12.0, -269.0),(-1.0, -232.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C30004FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((40.0, -222.0),(51.0, -239.0),(12.0, -269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C30109FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((109.0, -322.0),(138.0, -318.0),(99.0, -324.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CD7777FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((123.0, -311.0),(109.0, -322.0),(99.0, -324.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BD5252FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((109.0, -322.0),(123.0, -311.0),(138.0, -318.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BE5752FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((104.0, -145.0),(127.0, -139.0),(119.0, -169.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F99791FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((260.0, -69.0),(246.0, -78.0),(225.0, -43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C90110FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((218.0, -102.0),(237.0, -86.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F58582FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((242.0, -133.0),(218.0, -102.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F06260FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((218.0, -102.0),(242.0, -133.0),(217.0, -103.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F5857FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((263.0, -168.0),(242.0, -133.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CB0214FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((230.0, -155.0),(242.0, -133.0),(263.0, -168.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC0214FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((171.0, -126.0),(191.0, -145.0),(170.0, -152.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F8867FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((191.0, -145.0),(171.0, -126.0),(195.0, -116.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FB9B94FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((170.0, -152.0),(191.0, -145.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE0103FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-53.0, -119.0),(-54.0, -123.0),(-74.0, -121.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F3B4AAD1' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-53.0, -119.0),(-21.0, -121.0),(-23.0, -123.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F9D9D128' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-54.0, -123.0),(-53.0, -119.0),(-23.0, -123.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EBC9C374' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-262.0, -169.0),(-248.0, -186.0),(-265.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA3F45FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-248.0, -186.0),(-262.0, -169.0),(-228.0, -151.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF9490FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-228.0, -151.0),(-262.0, -169.0),(-266.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F29490FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-289.0, -158.0),(-262.0, -169.0),(-265.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E45555FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-262.0, -169.0),(-289.0, -158.0),(-266.0, -130.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF908AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-78.0, -188.0),(-51.0, -168.0),(-65.0, -195.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D21122FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-51.0, -168.0),(-78.0, -188.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EB504FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-78.0, -188.0),(-95.0, -167.0),(-77.0, -147.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E9494CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-99.0, -218.0),(-78.0, -188.0),(-79.0, -220.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E25051FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-78.0, -188.0),(-65.0, -195.0),(-79.0, -220.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DF4548FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-100.0, -168.0),(-78.0, -188.0),(-99.0, -218.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E2494BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-95.0, -167.0),(-78.0, -188.0),(-100.0, -168.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E1383DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-128.0, -204.0),(-100.0, -168.0),(-99.0, -218.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E75B59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-128.0, -204.0),(-131.0, -181.0),(-100.0, -168.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA6B6BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-128.0, -204.0),(-99.0, -218.0),(-116.0, -221.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D92E37FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-152.0, -212.0),(-128.0, -204.0),(-116.0, -221.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD4545FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-131.0, -181.0),(-128.0, -204.0),(-152.0, -212.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#ED7F7CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-190.0, -119.0),(-170.0, -125.0),(-177.0, -143.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F8948DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-166.0, -101.0),(-170.0, -125.0),(-190.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E1302EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-177.0, -143.0),(-170.0, -125.0),(-148.0, -132.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F89790FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-148.0, -132.0),(-170.0, -125.0),(-152.0, -100.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E33E36FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-170.0, -125.0),(-166.0, -101.0),(-152.0, -100.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E1443AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((447.0, -138.0),(429.0, -156.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B00005FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((429.0, -156.0),(435.0, -183.0),(421.0, -190.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D26C6AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((429.0, -156.0),(447.0, -138.0),(452.0, -162.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C94041FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((435.0, -183.0),(429.0, -156.0),(452.0, -162.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D3716DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((429.0, -156.0),(401.0, -190.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B00007FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((401.0, -190.0),(429.0, -156.0),(421.0, -190.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C63C3DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((461.0, -115.0),(476.0, -135.0),(447.0, -138.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CB4040FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((391.0, -65.0),(375.0, -103.0),(319.0, -55.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B40001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((375.0, -103.0),(329.0, -105.0),(319.0, -55.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((375.0, -103.0),(445.0, -84.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((375.0, -103.0),(391.0, -65.0),(445.0, -84.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((349.0, -148.0),(375.0, -103.0),(387.0, -141.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B20001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, -105.0),(375.0, -103.0),(349.0, -148.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B00000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, -105.0),(293.0, -70.0),(319.0, -55.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B90101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -70.0),(329.0, -105.0),(284.0, -77.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BE0002FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((281.0, -47.0),(293.0, -70.0),(284.0, -77.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA5958FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((265.0, -101.0),(329.0, -105.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, -105.0),(265.0, -101.0),(284.0, -77.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((237.0, -86.0),(265.0, -101.0),(262.0, -117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F27872FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((246.0, -78.0),(265.0, -101.0),(237.0, -86.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F27B78FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((284.0, -77.0),(265.0, -101.0),(260.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E64649FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((265.0, -101.0),(246.0, -78.0),(260.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF6C69FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, 91.0),(321.0, 77.0),(328.0, 94.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D87E7BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((321.0, 77.0),(329.0, 91.0),(369.0, 56.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B50102FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, 91.0),(374.0, 90.0),(369.0, 56.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B90101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((341.0, 116.0),(329.0, 91.0),(328.0, 94.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D98583FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((329.0, 91.0),(341.0, 116.0),(374.0, 90.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BE0209FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((321.0, 77.0),(365.0, 44.0),(312.0, 66.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B60104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((365.0, 44.0),(352.0, 27.0),(312.0, 66.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF0109FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((365.0, 44.0),(321.0, 77.0),(369.0, 56.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BD0103FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((365.0, 44.0),(402.0, 46.0),(393.0, 13.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EC615CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((365.0, 44.0),(369.0, 56.0),(402.0, 46.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA615DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((379.0, 4.0),(365.0, 44.0),(393.0, 13.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA5C58FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((352.0, 27.0),(365.0, 44.0),(379.0, 4.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E85A59FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((398.0, 115.0),(361.0, 131.0),(370.0, 144.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D52223FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((361.0, 131.0),(398.0, 115.0),(374.0, 90.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF0207FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((361.0, 131.0),(341.0, 117.0),(370.0, 144.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DF958FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((361.0, 131.0),(341.0, 116.0),(341.0, 117.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D98B85FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((341.0, 116.0),(361.0, 131.0),(374.0, 90.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C40208FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((433.0, 121.0),(455.0, 156.0),(471.0, 125.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F66F60FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((459.0, 108.0),(433.0, 121.0),(471.0, 125.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FC8579FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((413.0, 155.0),(433.0, 121.0),(408.0, 122.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F14F3BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((433.0, 121.0),(422.0, 84.0),(408.0, 122.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FF988CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((433.0, 121.0),(445.0, 83.0),(422.0, 84.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FC8578FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((433.0, 121.0),(459.0, 108.0),(445.0, 83.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FC8378FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((484.0, 71.0),(517.0, 83.0),(495.0, 50.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F55444FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((517.0, 83.0),(484.0, 71.0),(495.0, 98.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F55647FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((484.0, 71.0),(495.0, 50.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E20806FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((495.0, 98.0),(484.0, 71.0),(463.0, 79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FB7165FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((439.0, 164.0),(413.0, 155.0),(413.0, 157.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E9A699C6' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((433.0, 121.0),(439.0, 164.0),(455.0, 156.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E4794FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((439.0, 164.0),(433.0, 121.0),(413.0, 155.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E86048FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-364.0, -76.0),(-361.0, -35.0),(-348.0, -45.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F49D98FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-361.0, -35.0),(-379.0, -24.0),(-349.0, -9.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D3161CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-348.0, -45.0),(-361.0, -35.0),(-333.0, -16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D61D1FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-361.0, -35.0),(-349.0, -9.0),(-333.0, -16.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D22124FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-412.0, -123.0),(-391.0, -111.0),(-403.0, -133.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9C2F31FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-391.0, -111.0),(-374.0, -128.0),(-403.0, -133.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#9F1F28FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-391.0, -111.0),(-412.0, -123.0),(-426.0, -101.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A23438FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-399.0, -84.0),(-391.0, -111.0),(-426.0, -101.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BD4142FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-374.0, -128.0),(-391.0, -111.0),(-369.0, -89.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CD4E4EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-391.0, -111.0),(-399.0, -84.0),(-369.0, -89.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE3E3EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-406.0, -51.0),(-399.0, -84.0),(-410.0, -49.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D44143FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-379.0, -24.0),(-406.0, -51.0),(-410.0, -49.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF928BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-390.0, -68.0),(-364.0, -76.0),(-369.0, -89.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA6D6AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-399.0, -84.0),(-390.0, -68.0),(-369.0, -89.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE2C33FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-406.0, -51.0),(-390.0, -68.0),(-399.0, -84.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D3393EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-390.0, -68.0),(-361.0, -35.0),(-364.0, -76.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F39B98FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-361.0, -35.0),(-390.0, -68.0),(-379.0, -24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F39E99FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-390.0, -68.0),(-406.0, -51.0),(-379.0, -24.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F1968FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((244.0, -25.0),(258.0, -24.0),(260.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF0214FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((258.0, -24.0),(281.0, -47.0),(260.0, -69.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((258.0, -24.0),(244.0, -25.0),(262.0, -5.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D76760FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -38.0),(328.0, -42.0),(319.0, -55.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EC6564FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((328.0, -42.0),(293.0, -38.0),(305.0, -19.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E85D5CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -70.0),(293.0, -38.0),(319.0, -55.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E74E4FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -38.0),(293.0, -70.0),(281.0, -47.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E75556FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((258.0, -24.0),(293.0, -38.0),(281.0, -47.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA0101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((305.0, -19.0),(293.0, -38.0),(262.0, -5.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BB0104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -38.0),(258.0, -24.0),(262.0, -5.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC010CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((293.0, -267.0),(270.0, -278.0),(287.0, -251.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C34B4DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((270.0, -278.0),(253.0, -272.0),(287.0, -251.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BA2D32FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((270.0, -278.0),(293.0, -267.0),(294.0, -269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D08786FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((253.0, -272.0),(240.0, -289.0),(216.0, -284.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B82D34FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((240.0, -289.0),(218.0, -297.0),(216.0, -284.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C45550FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((218.0, -297.0),(197.0, -301.0),(216.0, -284.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF4E50FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((216.0, -284.0),(197.0, -301.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A30101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((197.0, -301.0),(160.0, -298.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#A20101FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((27.0, -121.0),(12.0, -154.0),(5.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E76554FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((127.0, -139.0),(143.0, -171.0),(119.0, -169.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F36F6BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((152.0, -155.0),(143.0, -171.0),(127.0, -139.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F26A66FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((192.0, -222.0),(143.0, -171.0),(170.0, -152.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C80002FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((143.0, -171.0),(152.0, -155.0),(170.0, -152.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DD0B1FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((109.0, -107.0),(90.0, -110.0),(118.0, -104.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F4BFB7C3' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((109.0, -107.0),(104.0, -145.0),(90.0, -110.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E65E50FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((127.0, -139.0),(109.0, -107.0),(118.0, -104.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E4544BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((104.0, -145.0),(109.0, -107.0),(127.0, -139.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E95245FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((246.0, -78.0),(221.0, -48.0),(225.0, -43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CD2B2DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((221.0, -48.0),(246.0, -78.0),(237.0, -86.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE0B19FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((197.0, -65.0),(217.0, -103.0),(175.0, -79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D63330FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((197.0, -65.0),(218.0, -102.0),(217.0, -103.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF0B19FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((221.0, -48.0),(197.0, -65.0),(225.0, -43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EBBBB599' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((218.0, -102.0),(197.0, -65.0),(237.0, -86.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D31420FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((197.0, -65.0),(221.0, -48.0),(237.0, -86.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D43736FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((197.0, -65.0),(161.0, -86.0),(225.0, -43.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F6D2CA3E' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((161.0, -86.0),(197.0, -65.0),(175.0, -79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E8A99EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((159.0, -89.0),(139.0, -99.0),(161.0, -86.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E3847DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((159.0, -89.0),(171.0, -126.0),(139.0, -99.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E1433CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((171.0, -126.0),(159.0, -89.0),(195.0, -116.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E43D36FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((159.0, -89.0),(161.0, -86.0),(175.0, -79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E68E83FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((195.0, -116.0),(159.0, -89.0),(175.0, -79.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE423BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((148.0, -134.0),(152.0, -155.0),(127.0, -139.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA8C87FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((148.0, -134.0),(127.0, -139.0),(139.0, -99.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E43E35FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((171.0, -126.0),(148.0, -134.0),(139.0, -99.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E43E37FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((152.0, -155.0),(148.0, -134.0),(170.0, -152.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F6756FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((148.0, -134.0),(171.0, -126.0),(170.0, -152.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FA8E89FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((216.0, -150.0),(242.0, -133.0),(230.0, -155.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E2363BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((216.0, -150.0),(191.0, -145.0),(195.0, -116.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F98E86FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((216.0, -150.0),(195.0, -116.0),(217.0, -103.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F9938EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((242.0, -133.0),(216.0, -150.0),(217.0, -103.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F2726EFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((216.0, -150.0),(230.0, -155.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CC010BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((191.0, -145.0),(216.0, -150.0),(213.0, -192.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE0108FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((447.0, -138.0),(467.0, -153.0),(452.0, -162.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D37974FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((476.0, -135.0),(467.0, -153.0),(447.0, -138.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D4736FFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((488.0, -121.0),(476.0, -135.0),(461.0, -115.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D56866FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((488.0, -121.0),(502.0, -102.0),(499.0, -112.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DDB2B382' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((488.0, -121.0),(461.0, -115.0),(502.0, -102.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#D66767FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((488.0, -121.0),(467.0, -153.0),(476.0, -135.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DDB1B482' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((257.0, -289.0),(270.0, -278.0),(294.0, -269.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0B4B57F' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((240.0, -289.0),(257.0, -289.0),(218.0, -297.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DBA5A7BB' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((270.0, -278.0),(257.0, -289.0),(253.0, -272.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE7170FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((257.0, -289.0),(240.0, -289.0),(253.0, -272.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CB696AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((160.0, -298.0),(171.0, -308.0),(154.0, -316.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C15453FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((57.0, -151.0),(65.0, -116.0),(88.0, -149.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA4F46FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((65.0, -116.0),(57.0, -151.0),(51.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E76455FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((27.0, -121.0),(57.0, -151.0),(12.0, -154.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EA5046FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((12.0, -154.0),(6.0, -174.0),(-10.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F97E77FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -174.0),(-16.0, -215.0),(-10.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CB0004FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -174.0),(41.0, -175.0),(40.0, -222.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C30001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((-16.0, -215.0),(6.0, -174.0),(-1.0, -232.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C50104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -174.0),(40.0, -222.0),(-1.0, -232.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C30003FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((41.0, -175.0),(71.0, -213.0),(40.0, -222.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BF0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((40.0, -222.0),(71.0, -213.0),(51.0, -239.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C9041BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((82.0, -113.0),(65.0, -116.0),(90.0, -110.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F2C3C082' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((65.0, -116.0),(82.0, -113.0),(88.0, -149.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E75F53FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((104.0, -145.0),(82.0, -113.0),(90.0, -110.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E75C4DFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((82.0, -113.0),(104.0, -145.0),(88.0, -149.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E95445FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((30.0, -119.0),(27.0, -121.0),(5.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0C9C54A' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((30.0, -119.0),(65.0, -116.0),(51.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E6C3B882' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((57.0, -151.0),(30.0, -119.0),(51.0, -119.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E86555FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((30.0, -119.0),(57.0, -151.0),(27.0, -121.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E76255FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((197.0, -301.0),(187.0, -307.0),(160.0, -298.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C45856FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((187.0, -307.0),(171.0, -308.0),(160.0, -298.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C25753FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((171.0, -308.0),(187.0, -307.0),(154.0, -316.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CF878AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((187.0, -307.0),(197.0, -301.0),(218.0, -297.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CE8384FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((257.0, -289.0),(187.0, -307.0),(218.0, -297.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DBAAA99F' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((57.0, -151.0),(38.0, -169.0),(12.0, -154.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FC9F98FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((38.0, -169.0),(57.0, -151.0),(41.0, -175.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F9908CFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((38.0, -169.0),(6.0, -174.0),(12.0, -154.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F88480FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((6.0, -174.0),(38.0, -169.0),(41.0, -175.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DA0517FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((143.0, -171.0),(118.0, -174.0),(119.0, -169.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E0182BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((51.0, -239.0),(82.0, -226.0),(95.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BC0001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((71.0, -213.0),(82.0, -226.0),(51.0, -239.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C9061BFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((57.0, -151.0),(78.0, -179.0),(41.0, -175.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#EF5354FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((78.0, -179.0),(71.0, -213.0),(41.0, -175.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C50001FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((95.0, -263.0),(110.0, -214.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B90000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((82.0, -226.0),(110.0, -214.0),(95.0, -263.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#BE0000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((110.0, -214.0),(118.0, -174.0),(143.0, -171.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C90003FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((110.0, -214.0),(78.0, -179.0),(118.0, -174.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#CA0104FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((110.0, -214.0),(192.0, -222.0),(145.0, -255.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#B80000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((110.0, -214.0),(143.0, -171.0),(192.0, -222.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C10000FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((110.0, -214.0),(82.0, -226.0),(71.0, -213.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C80215FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((78.0, -179.0),(110.0, -214.0),(71.0, -213.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#C60004FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((87.0, -167.0),(57.0, -151.0),(88.0, -149.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FB9C95FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((87.0, -167.0),(78.0, -179.0),(57.0, -151.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F58077FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((78.0, -179.0),(87.0, -167.0),(118.0, -174.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#DE1728FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((118.0, -174.0),(87.0, -167.0),(119.0, -169.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#E9474AFF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((87.0, -167.0),(104.0, -145.0),(119.0, -169.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#F98E88FF' })}, 0);
+setTimeout(() => {Calc.setExpression({
+        latex: `\\operatorname{polygon}((104.0, -145.0),(87.0, -167.0),(88.0, -149.0))`,
+        fillOpacity: '1',
+        fill: 'true',
+        color: '#FB9D96FF' })}, 0);
