@@ -123,7 +123,7 @@ function draw_on_desmos(data) {
 
         color = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${color[3] / 255})`;
         ctx.fillStyle = color;
-        ctx.strokeStyle = "black";
+        ctx.strokeStyle = color
         ctx.fill();
         ctx.stroke();
 
