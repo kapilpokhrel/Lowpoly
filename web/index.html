@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Simple script to generate lowpoly images in desmos graph." />
+    <meta name="description" content="Simple script to generate lowpoly images." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DesmosLowpoly</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 
@@ -28,21 +27,14 @@
         </div>
         <div class="ctrlButtons">
             <button onclick="Process()" id="genButton">Generate</button>
-            <button hidden id="copyButton">Copy JS</button>
         </div>
-        <div id="tooltipText" style="font-size:10px; text-align:center;" hidden></div>
     </div>
     <div class="output">
-        <div id="calculator"></div>
         <div class="canvas">
             <canvas id="testCanvas"></canvas>
         </div>
     </div>
 </body>
 <script src='script.js'></script>
-<script>
-    var elt = document.getElementById('calculator');
-    var calculator = Desmos.GraphingCalculator(elt);
-</script>
 
 </html>

@@ -67,47 +67,16 @@ html, body {
     display: flex;
     flex-direction: row;
     height: 80%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.output #calculator {
-    width: 50%;
-    height: 100%;
-    margin: 5px 5px 5px 5px;
-}
-
-#calculator:before {
-    content: "Some browser may not show gradual change and it may take some time.";
-    position: absolute;
-    z-index: 100;
-    padding: 1px;
-    font-size: 12px;
-    width: 80%;
 }
 
 .output .canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 90%;
     height: 100%;
     margin: 5px 5px 5px 0;
     background-color:#f1f6f9;
-}
-
-@media screen and (max-width: 760px) {
-    .output {
-        flex-direction: column;
-    }
-
-    .output #calculator {
-        width: 100%;
-        height: 50%;
-    }
-
-    .output .canvas {
-        width: 100%;
-        height: 50%;
-    }
 }

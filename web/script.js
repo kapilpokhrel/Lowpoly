@@ -7,8 +7,6 @@ const imageArea_text = document.querySelector('.imageArea .text');
 const browseButton = document.querySelector('.imageArea .button');
 const imageBrowser = document.getElementById("imageBrowser");
 const genButton = document.getElementById("genButton");
-const copyButton = document.getElementById("copyButton");
-const tooltipText = document.getElementById("tooltipText");
 const types = ['image/jpg', 'image/jpeg', 'image/png'];
 
 function canvasResize() {
@@ -36,7 +34,7 @@ function canvasResize() {
     }
 }
 
-function draw_on_desmos(data) {
+function draw_on_canvas(data) {
     var triangles = data.triangles;
     width = data.width;
     height = data.height;
@@ -50,66 +48,6 @@ function draw_on_desmos(data) {
     var ctx = testCanvas.getContext('2d');
     ctx.clearRect(0, 0, testCanvas.width, testCanvas.height);
 
-
-    //Desmos settings
-    calculator.setBlank();
-    var coords = calculator.graphpaperBounds.mathCoordinates;
-    var aRatio = coords.width / coords.height;
-    var xboundry, yboundry;
-
-    if (width > height) {
-        {
-            xboundry = 50 + width;
-            yboundry = xboundry / aRatio;
-        }
-    } else {
-        {
-            yboundry = 50 + height;
-            xboundry = aRatio * yboundry;
-        }
-    }
-    calculator.setMathBounds({
-        left: -xboundry,
-        right: xboundry,
-        top: yboundry,
-        bottom: -yboundry
-    });
-    calculator.updateSettings({
-        xAxisNumbers: false,
-        yAxisNumbers: false,
-        expressionsCollapsed: true
-    });
-
-    expressions = "";
-    expressions = expressions.concat(`
-        Calc.setBlank();
-        var coords = Calc.graphpaperBounds.mathCoordinates;
-        var aRatio = coords.width / coords.height;
-        var xboundry, yboundry;
-
-        if (${width} > ${height}) {
-            {
-                xboundry = 50 + ${width};
-                yboundry = xboundry / aRatio;
-            }
-        } else {
-            {
-                yboundry = 50 + ${height};
-                xboundry = aRatio * yboundry;
-            }
-        }
-        Calc.setMathBounds({
-            left: -xboundry,
-            right: xboundry,
-            top: yboundry,
-            bottom: -yboundry
-        });
-        Calc.updateSettings({
-            xAxisNumbers: false,
-            yAxisNumbers: false,
-            expressionsCollapsed: true
-        });
-    `);
     //Drawing triangles
     for (let i = 0; i < triangles.length; i++) {
         let vertices = triangles[i].vertices;
@@ -126,44 +64,14 @@ function draw_on_desmos(data) {
         ctx.strokeStyle = color
         ctx.fill();
         ctx.stroke();
-
-        let latex = `\\\operatorname{polygon}(
-            (${vertices[0].x - width / 2}, ${-(vertices[0].y - height / 2)}),
-            (${vertices[1].x - width / 2}, ${-(vertices[1].y - height / 2)}),
-            (${vertices[2].x - width / 2}, ${-(vertices[2].y - height / 2)}))`;
-        setTimeout(() => {
-            calculator.setExpression({
-                latex: latex,
-                fillOpacity: 1,
-                fill: true,
-                color: color
-            })
-        },
-            0
-        );
-        expressions = expressions.concat(`
-            setTimeout(() => {
-                Calc.setExpression({
-                    latex: \`\\\\${latex}\`,
-                    fillOpacity: 1,
-                    fill: true,
-                    color: '${color}'
-                })},
-                0
-            );
-        `);
-
     }
 }
 
 function Process() {
-    genButton.textContent = "Loading";
-    copyButton.hidden = true;
-    tooltipText.hidden = true;
-    tooltipText.textContent = "";
     if (imageFile == null)
         alert("Image not selected");
     else {
+        genButton.textContent = "Loading";
         var edge_points = document.getElementById("edge-points").value;
         var bg_points = document.getElementById("bg-points").value;
         edge_points = (edge_points <= 0) ? 1 : edge_points;
@@ -181,10 +89,8 @@ function Process() {
 
         generator.postMessage(data);
         generator.onmessage = function (msg) {
-            draw_on_desmos(msg.data);
+            draw_on_canvas(msg.data);
             genButton.textContent = "Generate";
-            copyButton.hidden = false;
-            tooltipText.hidden = false;
         };
     }
 }
@@ -193,14 +99,6 @@ canvasResize();
 window.onresize = canvasResize;
 browseButton.onclick = () => {
     imageBrowser.click();
-}
-
-copyButton.onclick = () => {
-    navigator.clipboard.writeText(expressions.replace(/[\t\n\r\s]+/g, " ")).then(function () {
-        tooltipText.textContent = "Paste the JS expressions in desmos devtool's console."
-    }, function (err) {
-        console.error('Could not Copy: ', err);
-    });
 }
 
 imageBrowser.addEventListener('change', (event) => {
