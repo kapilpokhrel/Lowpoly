@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageDraw
 import numpy as np
 from skimage import filters, morphology, util
 from scipy.spatial import Delaunay
@@ -8,7 +8,9 @@ from argparse import ArgumentParser
 class LowPoly:
     def __init__(self, filename) -> None:
         #Open image as numpy array
-        self.image = np.array(Image.open(filename).convert('RGBA'))
+        self.filename = filename
+        self.pil_image = Image.open(filename).convert('RGBA')
+        self.image = np.array(self.pil_image)
         self.grayscale_image = self.image[:,:,:3].dot([0.07, 0.72, 0.21]).astype("uint8")
         self.shape = self.grayscale_image.shape
         self.height, self.width = self.shape[:2]
@@ -35,10 +37,10 @@ class LowPoly:
 
     def generate_max_entropy_points(self, n_points):
         length_scale = np.sqrt(self.width*self.height / n_points)
-        entropy_radius = length_scale*0.15;
+        entropy_radius = length_scale*0.15
         gmask_aplitude = 3
-        gmask_sd = length_scale * 0.3;
-        gfilter_radius = length_scale*0.1;
+        gmask_sd = length_scale * 0.3
+        gfilter_radius = length_scale*0.1
 
         #Apply Gaussian filter on image to make it image smooth 
         smooth_image = util.img_as_ubyte(filters.gaussian(self.grayscale_image, gfilter_radius))
@@ -132,98 +134,23 @@ class LowPoly:
 
         self.triangles_color = color_per_triangle.values.astype("uint8")
 
-
-def draw_triangles_in_desmos(lowpoly, browser, n_triangle=1):
-    '''
-        n_triangles is the number of triangles to draw at a time.
-        It looks cool to see picture being made piece by piece but sometimes it can be too slow.
-        -1 = all at once
-    '''
-    HalfWidth = lowpoly.width/2
-    HalfHeight = lowpoly.height/2
-
-    setting = """
-        Calc.updateSettings({
-            xAxisNumbers: false,
-            yAxisNumbers: false,
-            expressionsCollapsed: true
-        });
-    """
-   
-    if(browser):
-        browser.execute_script(setting)
-        coords = browser.execute_script("return Calc.graphpaperBounds.mathCoordinates;");
-        aRatio = coords['width']/coords['height']
-
-        xboundry = 0
-        yboundry = 0
-        if(HalfWidth > HalfHeight):
-            xboundry = 50+HalfWidth # 50 is padding
-            yboundry = xboundry/aRatio
-        else:
-            yboundry = 50+HalfHeight
-            xboundry = aRatio*yboundry
-
-        browser.execute_script("Calc.setMathBounds({{ left: {}, right: {}, top: {}, bottom: {} }})".format(-xboundry, xboundry, yboundry, -yboundry));
-    else:
-        boundssetting = """
-            var coords = Calc.graphpaperBounds.mathCoordinates;
-            var aRatio = coords.width/coords.height;
-            var hWidth = {};
-            var hHeight = {};
-            var xboundry, yboundry;
-            
-            if(hWidth > hHeight) {{
-                xboundry = 50 + hWidth;
-                yboundry = xboundry/aRatio;
-            }} else {{
-                yboundry = 50 + hHeight;
-                xboundry = aRatio*yboundry;
-            }}
-            Calc.setMathBounds({{
-                left: -xboundry,
-                right: xboundry,
-                top: yboundry,
-                bottom: -yboundry
-            }});
-        """.format(HalfWidth, HalfHeight)
-
-        print(setting)
-        print(boundssetting)
-
-    expression_list = []
-
-    # Calc is the Calculator object in desmos.
-    expression_layout = """Calc.setExpression({{
-        latex: `\\\operatorname{{polygon}}({},{},{})`,
-        fillOpacity: '1',
-        fill: 'true',
-        color: '#{:02X}{:02X}{:02X}{:02X}' }});"""
-
+def draw_triangles_in_image(lowpoly):
+    draw = ImageDraw.Draw(lowpoly.pil_image)
+    
     vertices = lowpoly.triangles.points
     for triangle, color in zip(lowpoly.triangles.simplices, lowpoly.triangles_color):
         if color[3] < 30:
             continue
-        expression = expression_layout.format(
-            *[(vertices[i][0]-HalfWidth, -(vertices[i][1]-HalfHeight)) for i in triangle],
-            *[i for i in color]
-        )
-        expression_list.append(expression)
-
-    if(browser):
-        if(n_triangle == -1):
-            browser.execute_script("".join(expression_list))
-        else:
-            for i in range(0, len(expression_list), n_triangle):
-                current_expression_list = expression_list[i:i+n_triangle]
-                browser.execute_script("".join(current_expression_list))
-    else:
-        for expression in expression_list:
-            print(f"setTimeout(() => {{%s}}, 0);"%expression[:-1])
+        
+        color_str = '#{:02X}{:02X}{:02X}{:02X}'.format(*[i for i in color])
+        draw.polygon([(vertices[i][0], vertices[i][1]) for i in triangle], fill=color_str, outline=color_str)
+    
+    name = f"{lowpoly.filename.rsplit('.', 1)[0]}_lowpoly.png"
+    lowpoly.pil_image.save(name)
 
 if __name__=="__main__":
 
-    parser = ArgumentParser(description='Genrate Lowpoly image on Desmos Graph')
+    parser = ArgumentParser(description='Genrate Lowpoly image')
     parser.add_argument('imagefile', metavar='ImageFile',
             help='Filepath of an image to convert.')
     parser.add_argument('-p', '--points', type=int, nargs='+', 
@@ -234,27 +161,12 @@ if __name__=="__main__":
                 (More points = More details = More Processing Time)
                 (Default: Calculated based on image size)
             """)
-    parser.add_argument('-t', '--triangles', nargs='?', type=int, const=1, default=1, 
-            help='No of triangle to draw at a time. -1 for drawing all at once (Default 1)')
-    parser.add_argument('-nb','--nobrowser', action='store_true',
-            help='Spits out js expressions insted of opening browser, ofcourse -t will not have any effect')
     parser.add_argument('-m', '--method', choices=['e', 's'], default='e',
             help='Method to get points, e for entropy method (slow but good result), s for sobel method; little bit fast')
 
     arguments = parser.parse_args()
 
-    lowpoly = LowPoly(arguments.imagefile);
-
-    
-    browser = None
-
-    # Initializing Selenium for opening desmos
-    if(arguments.nobrowser != True):
-        from selenium import webdriver
-        from selenium.webdriver.support.ui import WebDriverWait
-        
-        browser = webdriver.Chrome()
-        browser.get("https://desmos.com/calculator")
+    lowpoly = LowPoly(arguments.imagefile)
 
     #Generate Triangles
     points = 1
@@ -274,9 +186,7 @@ if __name__=="__main__":
         lowpoly.generate_max_entropy_points(points)
     lowpoly.generate_triangles()
 
-    if(arguments.nobrowser != True):
-        WebDriverWait(browser, timeout=10).until( lambda driver: (driver.execute_script("return typeof Calc;") == "object") )
-    draw_triangles_in_desmos(lowpoly, browser=browser, n_triangle=arguments.triangles)
+    draw_triangles_in_image(lowpoly)
 
 
     
