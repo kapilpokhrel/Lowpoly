@@ -7,8 +7,9 @@ This is a script to generate lowpoly of a image in a desmos graph. Python versio
 
 - **Clone the repo**
     ```
-    git clone https://github.com/kapilpokhrel/DesmosLowpoly.git
-    cd DesmosLowpoly
+    git clone https://github.com/kapilpokhrel/Lowpoly.git
+    cd Lowpoly
+    git checkout origin/desmos
     ```
 - **Install dependencies**
     - [**Optional**] Download browser driver for selenium.
