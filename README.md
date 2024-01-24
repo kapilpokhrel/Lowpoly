@@ -29,6 +29,10 @@ This is a script to generate lowpoly of a image. Two version are available, loca
     python lowpoly.py --help
     ```
 
+## Why?
+
+Because, one day I saw a Desmos art which made cool image by using polygons and I wanted to generate a lowpoly image made up of polygons in a desmos graph and it was quite a challenge. Later, I realized that have it generate only in desmos was kinda weird and changed it to generate a image. But still, there's a brach named desmos with old code.
+
 ## ~~Why Python script instead of just using Javascript?~~
 
 ~~I know its tedious to clone the repo and install all dependencies. But here are some reasons I chose python:~~
