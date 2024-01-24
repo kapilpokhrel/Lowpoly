@@ -16,7 +16,6 @@ This is a script to generate lowpoly of a image. Two version are available, loca
     cd Lowpoly
     ```
 - **Install dependencies**
-    - Install python packages
     ```
     pip install -r requirements.txt
     ```
